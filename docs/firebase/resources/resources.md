@@ -7,11 +7,13 @@ nav_order: 2
 
 # Resources
 
+
+[Plural Sight: Firebase the Big Picture](https://app.pluralsight.com/library/courses/google-firebase-big-picture/table-of-contents)
+
 https://github.com/machadop1407/react-firebase-course
-
-You will need a google account to set up Firebase
-
 
 https://cloudvisor.co/blog/aws-vs-firebase/
 
 https://multiqos.com/blogs/firebase-vs-aws-comparisons/
+
+
