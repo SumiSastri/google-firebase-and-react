@@ -2,6 +2,7 @@
 layout: default
 title: Choosing between Firebase and AWS
 parent: firebase-vs-aws
+grand_parent: Firebase 
 nav_order: 1
 has_children: true
 ---
