@@ -3,7 +3,7 @@ layout: default
 title: Part 2
 parent: core-concepts
 grand_parent: Firebase
-nav_order: 2
+nav_order: 3
 ---
 
 # Part 2

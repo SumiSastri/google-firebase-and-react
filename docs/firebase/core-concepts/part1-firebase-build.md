@@ -3,7 +3,7 @@ layout: default
 title: Firebase build tools
 parent: core-concepts
 grand_parent: Firebase
-nav_order: 1
+nav_order: 2
 ---
 
 # Firebase build tools

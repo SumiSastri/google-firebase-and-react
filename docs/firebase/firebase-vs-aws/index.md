@@ -1,11 +1,17 @@
 ---
 layout: default
 title: Choosing between Firebase and AWS
-nav_order: 2
-parent: Firebase vs AWS
+parent: firebase-vs-aws
+nav_order: 1
 has_children: true
 ---
-
+---
+layout: default
+title: Firebase Core Concepts
+parent: core-concepts
+nav_order: 2
+has_children: true
+---
 # Choosing between Firebase and AWS
 
 Firebase is google's cloud infrastructure and Amazon Web Services is a competitor service. Using one over the other is a matter of use case, personal choice and preference.

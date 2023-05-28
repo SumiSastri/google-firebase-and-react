@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Firebase pros
-nav_order: 1
-parent: Firebase vs AWS
+nav_order: 2
+parent: firebase-vs-aws
 grand_parent: Firebase 
 ---
 

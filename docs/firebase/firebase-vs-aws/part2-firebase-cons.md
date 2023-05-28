@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Part 2
-nav_order: 2
+nav_order: 3
 parent: Firebase vs AWS
 grand_parent: Firebase 
 ---

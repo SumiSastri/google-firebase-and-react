@@ -3,7 +3,7 @@ layout: default
 title: Resources and further reading
 parent: Resources
 grand_parent: Firebase
-nav_order: 1
+nav_order: 2
 ---
 
 # Resources and further reading
