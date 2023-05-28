@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Resources
-parent: docs
-nav_order: 2
+title: Resources and further reading
+parent: Resources
+grand_parent: Firebase
+nav_order: 1
 ---
 
-# Resources
+# Resources and further reading
 
 
 [Plural Sight: Firebase the Big Picture](https://app.pluralsight.com/library/courses/google-firebase-big-picture/table-of-contents)

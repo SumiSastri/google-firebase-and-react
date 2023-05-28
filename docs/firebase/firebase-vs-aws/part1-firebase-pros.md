@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Firebase Pros
+title: Firebase pros
+nav_order: 1
 parent: Firebase vs AWS
 grand_parent: Firebase 
-
 ---
+
 # Firebase pros
 
 - Firestore single platform allowing fast development of backend infrastructure services
