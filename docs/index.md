@@ -4,4 +4,6 @@ title: Home
 nav_order: 1
 ---
 
-# Home 
+# Home
+
+This is a firebase app
