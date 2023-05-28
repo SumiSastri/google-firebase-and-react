@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Firebase versus AWS
+nav_order: 2
 parent: Firebase vs AWS
-grand_parent: Firebase
 has_children: true
 ---
 
