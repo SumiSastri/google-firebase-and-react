@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Firebase build tools
-nav_order: 1
-parent: Core Concepts
+parent: core-concepts
 grand_parent: Firebase
+nav_order: 1
 ---
-
 
 # Firebase build tools
 

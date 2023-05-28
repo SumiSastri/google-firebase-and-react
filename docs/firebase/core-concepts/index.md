@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Firebase Core Concepts
+parent: core-concepts
 nav_order: 2
-parent: Core Concepts
 has_children: true
 ---
+
 
 # Firebase Core Concepts
 

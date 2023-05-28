@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Part 2
-nav_order: 2
-parent: Core Concepts
+parent: core-concepts
 grand_parent: Firebase
+nav_order: 2
 ---
 
 # Part 2
