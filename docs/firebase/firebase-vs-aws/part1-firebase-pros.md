@@ -5,7 +5,7 @@ parent: Firebase vs AWS
 grand_parent: Firebase 
 
 ---
-# Firebase Pros
+# Firebase pros
 
 - Firestore single platform allowing fast development of backend infrastructure services
 - Cloud Messaging
