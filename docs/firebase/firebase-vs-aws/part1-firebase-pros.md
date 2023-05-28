@@ -3,7 +3,7 @@ layout: default
 title: Firebase Pros
 parent: Firebase vs AWS
 grand_parent: Firebase 
-has_children: true
+
 ---
 # Firebase Pros
 

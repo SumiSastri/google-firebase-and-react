@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firebase Core Concepts
+nav_order: 2
 parent: Core Concepts
 grand_parent: Firebase
 has_children: true

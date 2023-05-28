@@ -3,7 +3,6 @@ layout: default
 title: Part 4
 parent: Firebase vs AWS
 grand_parent: Firebase
-has_children: true
 ---
 
 # Part 4
