@@ -4,6 +4,7 @@ title: Firebase core concepts
 parent: core-concepts
 grand_parent: firebase
 has_children: true
+nav_order: 1
 ---
 # Firebase core concepts
 
