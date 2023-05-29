@@ -3,6 +3,7 @@ layout: default
 title: Firebase release and monitor tools
 parent: core-concepts
 grand_parent: firebase
+nav_order: 3
 ---
 
 # Firebase release and monitor tools
