@@ -2,8 +2,7 @@
 layout: default
 title: Part 4
 parent: core-concepts
-grand_parent: Firebase
-nav_order: 5
+grand_parent: firebase
 ---
 
 # Part 4

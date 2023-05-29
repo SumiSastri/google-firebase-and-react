@@ -2,13 +2,7 @@
 layout: default
 title: Choosing between Firebase and AWS
 parent: firebase-vs-aws
-nav_order: 1
-has_children: true
----
----
-layout: default
-title: Firebase Core Concepts
-parent: core-concepts
+grand_parent: firebase
 nav_order: 2
 has_children: true
 ---

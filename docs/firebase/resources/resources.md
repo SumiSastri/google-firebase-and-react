@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Resources and further reading
-parent: Resources
-grand_parent: Firebase
+parent: resources
+grand_parent: firebase 
 nav_order: 2
 ---
 

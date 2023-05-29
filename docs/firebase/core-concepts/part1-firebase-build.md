@@ -2,8 +2,7 @@
 layout: default
 title: Firebase build tools
 parent: core-concepts
-grand_parent: Firebase
-nav_order: 2
+grand_parent: firebase
 ---
 
 # Firebase build tools
@@ -24,9 +23,23 @@ Often, you have to find image hosts like Imgur, or Pixabay, to host your images 
 
 ## Hosting
 
-Firestore provides app hosting as well as the option to purchase custom domains. Part of the hosting services is SSL certificates baked in. With other hosting services - take Wordpress, for example - you need to add safety plugins, purchase SSL certificates and think about the whole backend safety and security operations using something called the C-panel.
+Firestore provides app hosting as well as the option to purchase custom domains - especially useful if you want to purchase `.com` extensions as there is no premium to purchase/ renew.
+
+Part of the hosting services is SSL certificates baked in. With other hosting services - take Wordpress, for example - you need to add safety plugins, purchase SSL certificates and think about the whole backend safety and security operations using something called the C-panel.
 
 Firebase not only provides you with hosting space, but also security and infrastructure support via the abstraction of infrastructure set up.
+
+The hosting service allows you to deploy code into a production environment.
+
+*Some of the key features*
+
+- Global CDNs (Content Delivery Networks)
+- Integrated with GitHub
+- Testing URLs possible
+- Versioned releases and simple deploys
+- Roll backs easy - one click
+- Integrates with Google Cloud Functions - allows you to integrate 3rd party APIs
+- Keep client and server side code in the same project
 
 ## Firestore
 

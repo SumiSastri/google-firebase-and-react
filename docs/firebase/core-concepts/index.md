@@ -2,7 +2,7 @@
 layout: default
 title: Firebase Core Concepts
 parent: core-concepts
-grand_parent: Firebase
+grand_parent: firebase
 nav_order: 1
 ---
 
