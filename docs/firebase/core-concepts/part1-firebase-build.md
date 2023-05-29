@@ -5,6 +5,15 @@ parent: core-concepts
 grand_parent: firebase
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Firebase build tools
 
 Firebase is an eco-system of products. Firebase build tools account for about 30% of these products in the development stage of app development.The following services can be enabled or disabled according to your use case.
@@ -88,7 +97,7 @@ NoSQL databases do not have formal relationships between data-sets. Data is an o
 
 ## Authentication
 
-The authentication service can be used in isolation. It handles account creation, sets user IDs used for loading data that only required by a particular user, allows users to  register/ sign-in & sign-out of accounts. 
+The authentication service can be used in isolation. It handles account creation, sets user IDs used for loading data that only required by a particular user, allows users to  register/ sign-in & sign-out of accounts.
 
 Other features include email-confirmation and password re-sets, so that users can manage their accounts effectively.
 
@@ -114,13 +123,13 @@ Firebase cloud functions are serverless functions that are trigged by an event s
 
 An event is user triggered - so if a user requests a static page, or wants to login and access their account, each of these are triggers. This means that you are only paying for the services when a user makes a request. There are no stand-by costs for keeping the servers up and running all the time. The Google Cloud Servers only provision services when a user asks for them - this request from the user is transmitted to the Google Cloud Servers via Google Cloud functions.
 
-Once a cloud function is created, tested and deployed, it is invoked. There are direct and indirect function invocations. 
+Once a cloud function is created, tested and deployed, it is invoked. There are direct and indirect function invocations.
 
 A direct trigger creates a call to your function and immediately returns a response - eg: HTTP requests for specific static pages using the page URLs.
 
 An indirect trigger creates an async call to your function and performs background tasks before returning a response. The function may invoke a call to the database in Firebase's Firestore, or a file from the Firebase File Storage system, or if the user wants to log-in from Firebase's Authentication service.
 
-Once a function is called and executed, it can be monitored and any errors fixed with the analytics services provided. This also helps to revert bad deployments and rollbacks are very easy. 
+Once a function is called and executed, it can be monitored and any errors fixed with the analytics services provided. This also helps to revert bad deployments and rollbacks are very easy.
 
 *Some of the functions that can be written are*
 

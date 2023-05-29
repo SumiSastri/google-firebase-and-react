@@ -6,6 +6,15 @@ grand_parent: firebase
 has_children: true
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Firebase Core Concepts
 
 Firebase's key offering is an app development platform allowing fast development of backend infrastructure services. The mobile and web app-development platform can be accessed by downloading the Firebase (Software Development Kits) SDKs that you  may require to build your app.
