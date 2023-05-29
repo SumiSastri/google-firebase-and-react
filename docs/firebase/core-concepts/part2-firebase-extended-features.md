@@ -53,5 +53,12 @@ Messages can also be analysed based on test results or delivery, open rates etc.
 
 ## Machine learning
 
+You can add machine learning (ML) but this feature is only available for mobile not web apps. These features which can run on devices include
 
+- text and image recognition
+- object detection
+- custom models which can be tested with A/B or multi-variate testing using Tensorflow Lite
+- prebuilt APIs
+
+As they can run on devices, ML is fast and provides quick feedback to servers. They also run offliine and sync with the device when the device is online.
 ## Extensions
