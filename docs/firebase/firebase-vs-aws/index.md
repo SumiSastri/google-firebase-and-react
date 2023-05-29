@@ -4,6 +4,7 @@ title: Choosing between Firebase and AWS
 parent: firebase-vs-aws
 grand_parent: firebase
 has_children: true
+nav_order: 2
 ---
 
 # Choosing between Firebase and AWS
