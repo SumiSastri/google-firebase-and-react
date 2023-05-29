@@ -1,19 +1,9 @@
 ---
 layout: default
 title: Firebase build tools
-nav_order: 2
 parent: core-concepts
 grand_parent: firebase
 ---
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 # Firebase build tools
 

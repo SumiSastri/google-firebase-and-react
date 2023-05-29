@@ -1,19 +1,10 @@
 ---
 layout: default
 title: Part 4
-nav_order: 3
+
 parent: firebase-vs-aws
 grand_parent: firebase
 ---
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
 
 # Part 4
 

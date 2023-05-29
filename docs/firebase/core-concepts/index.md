@@ -1,10 +1,8 @@
 ---
 layout: default
 title: Firebase core concepts
-nav_order: 2
 parent: core-concepts
 has_children: true
-
 ---
 
 <details open markdown="block">
