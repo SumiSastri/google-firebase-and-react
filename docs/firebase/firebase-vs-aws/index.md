@@ -2,7 +2,6 @@
 layout: default
 title: Choosing between Firebase and AWS
 parent: firebase-vs-aws
-grand_parent: firebase
 has_children: true
 ---
 
