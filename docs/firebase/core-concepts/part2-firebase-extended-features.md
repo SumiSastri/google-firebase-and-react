@@ -80,3 +80,5 @@ Internal extensions to other Google services are
 These have documentation to follow for set up and deploy.
 
 ## Firebase emulator
+
+The Firebase emulator allows you to check features on your local machine before your push changes to the Google Cloud Services.
