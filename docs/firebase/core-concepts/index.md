@@ -2,6 +2,7 @@
 layout: default
 title: Firebase Core Concepts
 parent: core-concepts
+grand_parent: firebase
 has_children: true
 ---
 
