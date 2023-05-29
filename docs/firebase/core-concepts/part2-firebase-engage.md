@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Part 2
+title: Firebase engage tools
 parent: core-concepts
 grand_parent: firebase
-nav_order: 3
 ---
 
-# Part 2
+# Firebase engage tools
 
-Firebase build has some extended functionality
+Firebase build has some extended functionality which is part of the [Firebase engage suite](https://firebase.google.com/products-engage). Here are some of the services offered
 
 ## Remote Config
 

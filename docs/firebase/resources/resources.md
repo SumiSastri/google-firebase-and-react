@@ -18,3 +18,5 @@ https://cloudvisor.co/blog/aws-vs-firebase/
 https://multiqos.com/blogs/firebase-vs-aws-comparisons/
 
 [PedroTech](https://www.youtube.com/watch?v=2hR-uWjBAgw&t=5349s)
+
+[Firebase](https://firebase.google.com/)
