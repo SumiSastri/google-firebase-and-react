@@ -63,10 +63,20 @@ You can add machine learning (ML) but this feature is only available for mobile 
 As they can run on devices, ML is fast and provides quick feedback to servers. They also run offliine and sync with the device when the device is online.
 ## Extensions and integrations with third parties
 
-Integrations reduce your build time
+Integrations get product features to market, reduce your build time, flex your scale up and down based on requests and traffic and reduces maintenance of each of these services separately as they can be integrated with other Firebase services. Some of these integrations are
 
-- Stripe
-- Mailchimp
+- Stripe - set up payments and invoice dispatch
+- Mailchimp - marketing triggers for email journeys
 - Snapchat
-- Twilio
+- Twilio - multi-media notifications 
+
+Internal extensions to other Google services are
+
 - Google Play
+- Google Translate - if you need to quickly translate text into multiple languages
+- Resizing images
+- Deleting users
+
+These have documentation to follow for set up and deploy.
+
+## Firebase emulator
