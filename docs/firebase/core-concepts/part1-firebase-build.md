@@ -3,6 +3,7 @@ layout: default
 title: Firebase build tools
 parent: core-concepts
 grand_parent: firebase
+nav_order: 1
 ---
 
 # Firebase build tools
@@ -17,9 +18,22 @@ These services are part of the Firebase Build suite.
 
 ## File storage
 
-You can store static files - text, markdown and images with Firebase. Images are cached on Firebase (Solid State Drives) SSDs, with the view to pre-optimising images and to fast rendering on front-end services.
+If you are creating user-generated-content (UGC), the Firebase file storage system is primarily to store user generated files. Other file storage is also permitted.
+
+You can store static files - text, markdown and images. Images are cached on Firebase (Solid State Drives) SSDs, with the view to pre-optimising images and to fast rendering on front-end services.
 
 Often, you have to find image hosts like Imgur, or Pixabay, to host your images and then import these again via these services APIs to use to build your app.
+
+Similarly you can store dynamic content - videos, animated gifs.
+
+If users download pdfs/ data you can ensure only authenticated users can access the data. Partial file download is possible due to the background caching of files.
+
+*Some of the key features*
+
+- Has a client SDK to enable file storage
+- Integrated with Google Cloud Functions - you can write custom code to manage files
+- Integrated with Google Authentication - only registered and authenticated users can access content
+- Simple file storage good for uploading and downloading files
 
 ## Hosting
 
