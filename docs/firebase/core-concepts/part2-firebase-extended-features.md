@@ -61,4 +61,12 @@ You can add machine learning (ML) but this feature is only available for mobile 
 - prebuilt APIs
 
 As they can run on devices, ML is fast and provides quick feedback to servers. They also run offliine and sync with the device when the device is online.
-## Extensions
+## Extensions and integrations with third parties
+
+Integrations reduce your build time
+
+- Stripe
+- Mailchimp
+- Snapchat
+- Twilio
+- Google Play

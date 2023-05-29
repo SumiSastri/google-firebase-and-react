@@ -2,7 +2,6 @@
 layout: default
 title: Resources
 parent: resources
-nav_order: 3
 has_children: true
 ---
 
