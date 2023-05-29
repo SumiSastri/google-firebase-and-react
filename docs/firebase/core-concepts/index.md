@@ -2,16 +2,14 @@
 layout: default
 title: Firebase Core Concepts
 parent: core-concepts
-grand_parent: firebase
-nav_order: 1
+has_children: true
 ---
-
 
 # Firebase Core Concepts
 
 Firebase's key offering is an app development platform allowing fast development of backend infrastructure services. The mobile and web app-development platform can be accessed by downloading the Firebase (Software Development Kits) SDKs that you  may require to build your app.
 
-Firebase services are serverless because you do not spin up a server but use Google Cloud Services. Firebase is therefore a managed service running Google servers for you. Some of the services that you get are credential checks, server configuration, provisioning any additional servers, decommissioning old servers - abstracting the heavy lifting of selecting what infra services you may need and how you need to set them up.
+Firebase services are serverless because you do not spin up a server but use Google Cloud Services. Firebase is therefore a managed service running Google servers for you. Some of the services that you get are load balancing of traffic to servers, credential checks, server configuration, provisioning any additional servers, decommissioning old servers. These functions are abstracting the heavy lifting of selecting what infra services you may need and how you need to set them up.
 
 All resources are hosted on Google Cloud Services. Using Firebase is using Google Servers and addiitional infrastructure services provided by the Firebase SDKs.
 

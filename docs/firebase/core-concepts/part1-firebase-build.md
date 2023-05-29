@@ -3,7 +3,6 @@ layout: default
 title: Firebase build tools
 parent: core-concepts
 grand_parent: firebase
-nav_order: 1
 ---
 
 # Firebase build tools
@@ -107,20 +106,36 @@ Authenticated users are automatically integrated into the Firestore database.
 
 ## Serverless cloud functions
 
-Firebase cloud functions allow you to write custom functions and set up backend code to manage your app's servers and therfore the app's infrastructure.
+Firebase Cloud Functions allow you to write custom functions to set up and manage your app's backend code. The code you write manages the Google Cloud Servers and your app's infrastructure.
 
-The advantage is that and roll out new features progressively from the front-end of your app without worrying too-much about how to manage infrastructure. Start-ups find this a good option as employing cloud infrastructure engineers is expensive. There is a caveat to this approach, scaling is not seamless with Google Cloud Services and migration to a new service - AWS, Azure or any other cloud infrastructure provider is difficult.
+The advantage is that you can roll out new features progressively from the front-end of your app without worrying too-much about how to manage infrastructure. Start-ups find this a good option as employing cloud infrastructure engineers is expensive. There is a caveat to this approach. Scaling is not seamless with Google Cloud Services and migration to a new service - AWS, Azure or any other cloud infrastructure provider.
 
-Firebase cloud functions are serverless functions that execute server-side code. The server, in this case, is Google Cloud Services. Serverless means there is no dedicated machine running your code at all time. Code is deployed to the servers and is run when an event is triggered.
+Firebase cloud functions are serverless functions that are trigged by an event set up in the code that provisions Google Cloud Servers functionality. Serverless means there is no dedicated machine running your code at all time. Code is deployed to the servers and is run when an event you have set up in your code is triggered.
 
- Once a cloud function is created, tested and deployed, it is invoked using event-driven triggers, webhooks. 
- 
- 
- Once a function is called, it can be monitored and any errors fixed. Function params and arguments, can ensure privacy and security measures are baked into the code and any other measures you want to write into the cloud function before it is deployed and invoked.
+An event is user triggered - so if a user requests a static page, or wants to login and access their account, each of these are triggers. This means that you are only paying for the services when a user makes a request. There are no stand-by costs for keeping the servers up and running all the time. The Google Cloud Servers only provision services when a user asks for them - this request from the user is transmitted to the Google Cloud Servers via Google Cloud functions.
 
-Reverting bad deployments and rollbacks are very easy making it easy to reverse incorrect code being shipped to end customers and limit any damages caused by such errrors.
+Once a cloud function is created, tested and deployed, it is invoked. There are direct and indirect function invocations. 
+
+A direct trigger creates a call to your function and immediately returns a response - eg: HTTP requests for specific static pages using the page URLs.
+
+An indirect trigger creates an async call to your function and performs background tasks before returning a response. The function may invoke a call to the database in Firebase's Firestore, or a file from the Firebase File Storage system, or if the user wants to log-in from Firebase's Authentication service.
+
+Once a function is called and executed, it can be monitored and any errors fixed with the analytics services provided. This also helps to revert bad deployments and rollbacks are very easy. 
+
+*Some of the functions that can be written are*
+
+- HTTP requests
+- Sheduled (CRON) jobs
+- Authentication
+- Cloud provisioning of Google Cloud Servers
+- Requests to Firestore data
+- Setting up analytics
 
 Once an app is created, Firebase also provides App Indexing and Dynamic Link sharing.
+
+The advantages of using Google Cloud functions is that they integrate seamlessly into the Google Cloud Infrastructure and the Firebase ecosystem.
+
+However, there are also disadvantages. App efficiency is compromised as the functions have to perform the create-test-build operations before sending information back to the user. This makes it slower and less performant. It is also harder to debug and fix server-side challenges as you have no control over server-side code - there is no middleware, or shared server state to check, you are reliant on the debugging tools provided by Google Cloud Services and Firebase.
 
 ## Pricing
 
