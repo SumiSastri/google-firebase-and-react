@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firebase pros
+nav_order: 3
 parent: firebase-vs-aws
 grand_parent: firebase
 ---

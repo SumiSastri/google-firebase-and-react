@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resources and further reading
+nav_order: 4
 parent: resources
 grand_parent: firebase 
 ---

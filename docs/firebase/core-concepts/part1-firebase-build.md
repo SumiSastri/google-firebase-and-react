@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firebase build tools
+nav_order: 2
 parent: core-concepts
 grand_parent: firebase
 ---

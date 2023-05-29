@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Part 4
+nav_order: 3
 parent: firebase-vs-aws
 grand_parent: firebase
 ---
