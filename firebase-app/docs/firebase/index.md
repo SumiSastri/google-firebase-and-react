@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firebase
+nav_order: 2
 has_children: true
 ---
 
