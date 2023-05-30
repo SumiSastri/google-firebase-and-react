@@ -4,9 +4,8 @@ const SignOut = () => {
   return (
     <div>
       <form>
-        <h5>SignOut Form</h5>
-        {/* <input>Email</input>
-        <input>Password</input> */}
+        <p>Done? Miss you already :-) Come back soon!</p>
+        <button>Sign-Out</button>
       </form>
     </div>
   );
