@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase release and monitor tools
-parent: core-concepts
+parent: services
 grand_parent: firebase
 ---
 

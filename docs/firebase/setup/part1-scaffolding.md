@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Webpack and React
-parent: firebase-vs-aws
+parent: setup
 grand_parent: firebase
 ---
 

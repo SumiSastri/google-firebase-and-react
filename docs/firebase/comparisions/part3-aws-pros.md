@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Part 3
-parent: firebase-vs-aws
+parent: comparisions
 grand_parent: firebase
 ---
 

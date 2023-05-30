@@ -1,7 +1,9 @@
 ---
 layout: default
 title: Setting up a Firebase account
-parent: set-up
+parent: setup
+nav_order: 1
+has_children: true
 ---
 
 # Setting up a Firebase account

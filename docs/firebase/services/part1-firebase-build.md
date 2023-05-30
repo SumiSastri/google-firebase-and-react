@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase build tools
-parent: core-concepts
+parent: services
 grand_parent: firebase
 ---
 

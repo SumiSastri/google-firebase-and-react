@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firestore setup
-parent: firebase-vs-aws
+parent: setup
 grand_parent: firebase
 ---
 

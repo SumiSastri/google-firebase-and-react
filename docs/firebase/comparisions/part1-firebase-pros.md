@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase pros
-parent: firebase-vs-aws
+parent: comparisions
 grand_parent: firebase
 ---
 

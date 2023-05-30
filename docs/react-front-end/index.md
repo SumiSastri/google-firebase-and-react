@@ -1,12 +1,12 @@
 ---
 layout: default
-title: React front end
+title: React frontend
 nav_order: 3
 has_children: true
 ---
 
 
-# React front end
+# React frontend
 
 Uninstall global version `npm uninstall -g create-react-app`
 Install CRA `npx create-react-app my-app` - installs latest CRA scripts

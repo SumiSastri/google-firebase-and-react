@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resources and further reading
+nav_order: 3
 parent: resources
 ---
 

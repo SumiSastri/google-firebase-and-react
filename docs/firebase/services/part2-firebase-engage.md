@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase engage tools
-parent: core-concepts
+parent: services
 grand_parent: firebase
 ---
 
