@@ -3,7 +3,6 @@ layout: default
 title: Setting up a Firebase account
 parent: set-up
 grand_parent: firebase
-nav_order: 1
 ---
 
 # Setting up a Firebase account
@@ -27,6 +26,16 @@ Go to the [Firebase Admin Console](https://console.firebase.google.com/) this is
 Version 8 of Firebase uses an object-oriented approach - which means Google Cloud Functions were accessing the Constructors from the SDK directly. V9 requires module bundlers - such as webpack (which we will use) so that the modules can import only the methods required from their individual modules. This bundling and modularisation of the SDK makes code more efficient and performant.
 
 The docs show the differences in the code base between v8 and v9 - you can toggle between the tabs to see them.
+
+# Scripts
+
+To install Firebase in your project use npm
+
+`npm install firebase`
+` npm install -g firebase-tools`
+
+Initialise
+`firebase init`
 
 ## Firebase with React
 

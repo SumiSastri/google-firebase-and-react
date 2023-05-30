@@ -3,7 +3,6 @@ layout: default
 title: Firebase build tools
 parent: core-concepts
 grand_parent: firebase
-nav_order: 3
 ---
 
 <details open markdown="block">
