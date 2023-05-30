@@ -24,3 +24,17 @@ Click next and select a region close to you - note that the number of regions th
 
 This creates your database for you and you can click through the tabs and familiarise yourself with the options available. At the time of writing (2023), a new feature Extensions allows you to integrate your database to a host of marketing, querying and payment tools.
 
+Set up you collections as required for the project. In the config file import all methods you require - for example:
+
+```JavaScript
+
+import {
+  getFirestore, collection, onSnapshot,
+  addDoc, deleteDoc, doc,
+  query, where,
+  orderBy, serverTimestamp,
+  updateDoc
+} from 'firebase/firestore'
+```
+
+Then initialise the service `const db = getFirestore()` in the file and you can then set up queries from the frontend to the backend Firestore database.

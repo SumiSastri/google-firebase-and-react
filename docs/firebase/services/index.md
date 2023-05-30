@@ -2,6 +2,7 @@
 layout: default
 title:Core concepts
 parent: services
+grand_parent: firebase
 nav_order: 2
 has_children: true
 ---
