@@ -2,8 +2,18 @@
 layout: default
 title: Firebase core concepts
 parent: core-concepts
+has_children: true
 nav_order: 3
 ---
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # Firebase core concepts
 

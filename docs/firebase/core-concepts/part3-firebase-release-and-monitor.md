@@ -6,6 +6,15 @@ grand_parent: firebase
 nav_order: 3
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Firebase release and monitor tools
 
 Some of the release and monitor tools have added functionality from the build and engage tools - Remote Config - for example is used across all three stages of the development process.
