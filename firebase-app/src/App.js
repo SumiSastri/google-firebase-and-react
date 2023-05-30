@@ -1,8 +1,8 @@
 import "./App.css";
 import AuthNav from "./auth-users/AuthNav";
 import Register from "./auth-users/Register";
-import SignIn from "./auth-users/SignIn";
-import SignOut from "./auth-users/SignOut";
+// import SignIn from "./auth-users/SignIn";
+// import SignOut from "./auth-users/SignOut";
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
         <h1>Firebase</h1>
         <AuthNav />
         <Register />
-        <SignIn />
-        <SignOut />
+        {/* <SignIn /> */}
+        {/* <SignOut /> */}
       </header>
     </div>
   );
