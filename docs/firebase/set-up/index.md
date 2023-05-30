@@ -2,7 +2,6 @@
 layout: default
 title: Setting up a Firebase account
 parent: set-up
-grand_parent: firebase
 ---
 
 # Setting up a Firebase account
@@ -15,6 +14,9 @@ Accept terms and default settings and in the background the spinner should start
 
 Under the cog Project Overview you will see the Build, Release and Monitior, Analytics and Engagle tools. And you will see you have been set up with the Spark account - no cost.
 
+Continue to register your app (select web/ mobile/ flutter/ gaming depending on what you are building). This app is a web-app only. Firebase then provides boiler plate code for config. In the `src` folder of your React frontend, add a `configs` folder and paste the boiler plate code provided. This connects your local machine to (Google Cloud Services) GCS.
+
+Hold off on clicking the deploy button and go back to the Firebase admin console. You will see your app created. Click into your app and you will get the project settings on your Firebase admin console. Click all the project settings tabs to familiarise yourself with some of the set-up and options now available to you.
 ## The Firebase admin console
 
 Go to the [Firebase Admin Console](https://console.firebase.google.com/) this is where all your Firebase projects will be listed. On the top right you will also get the latest official documentation - click the docs icon.
@@ -29,12 +31,25 @@ The docs show the differences in the code base between v8 and v9 - you can toggl
 
 # Scripts
 
-To install Firebase in your project use npm
+To install Firebase tools globally
+
+`npm install -g firebase-tools`
+
+cd into your project and install Firebase
 
 `npm install firebase`
-` npm install -g firebase-tools`
 
-Initialise
+Login to your account
+`firebase login`
+Login prompts will appear
+
+`Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.`
+
+`Allow Firebase to collect CLI and Emulator Suite usage and error reporting information?`
+
+This will take you to your google account associated with GCS and Firebase. Agreeing to the terms gives you and alert which authenticates you to use the Firebase CLI.
+
+You can now initialise the project
 `firebase init`
 
 ## Firebase with React

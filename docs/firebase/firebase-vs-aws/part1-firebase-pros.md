@@ -5,6 +5,15 @@ parent: firebase-vs-aws
 grand_parent: firebase
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Firebase pros
 
 - Firestore single platform allowing fast development of backend infrastructure services
