@@ -7,18 +7,27 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const submitRegistrationWithAuthPayload = async () => {
-    await createUserWithEmailAndPassword(auth, email, password);
-    // FIXME: local test, REMOVE
-    console.log(createUserWithEmailAndPassword, "test RegistrationPayload");
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } catch (err) {
+      console.log(err, "failed to create user - check code and logs");
+    }
   };
 
   return (
     <div>
-      <p>Not yet a user?</p>
       <h5>Register</h5>
       <form onSubmit={submitRegistrationWithAuthPayload}>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input
+          type='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type='password'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <button type='submit'>Submit</button>
       </form>
     </div>

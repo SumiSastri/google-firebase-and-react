@@ -6,7 +6,6 @@ const AuthNav = () => {
       <nav>
         <button>Sign-In</button>
         <button>Sign-Out</button>
-        <button>Register</button>
       </nav>
     </div>
   );
