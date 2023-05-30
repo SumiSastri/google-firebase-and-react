@@ -16,25 +16,21 @@ grand_parent: firebase
 
 # Firestore setup
 
-In the admin console go to the left nav and select [Firebase](https://console.firebase.google.com/) - there is an easy guide to set up your Firestore database.
+In the admin console go to the left nav and select [Auth](https://console.firebase.google.com/) - there is an easy guide to set up Auth and you can click the tabs and experiment with the set up. If you select a set up you do not like the edit function helps you edit the settings. You will require your app ID and Secret for set up for federated sign-in (3rd party sign-in with social accounts, etc.).
 
-Start in test mode not in production mode to access your data.
 
-Click next and select a region close to you - note that the number of regions that Firebase has is significantly lower than AWS. This is another reason why enterprise-level apps start with AWS as it is easy to scale globally.
-
-This creates your database for you and you can click through the tabs and familiarise yourself with the options available. At the time of writing (2023), a new feature Extensions allows you to integrate your database to a host of marketing, querying and payment tools.
-
-Set up you collections as required for the project. In the config file import all methods you require - for example:
+Set up auth as required for the project. In the config file import all methods you require - for example:
 
 ```JavaScript
 
 import {
-  getFirestore, collection, onSnapshot,
-  addDoc, deleteDoc, doc,
-  query, where,
-  orderBy, serverTimestamp,
-  updateDoc
-} from 'firebase/firestore'
+  getAuth,
+  // createUserWithEmailAndPassword,
+  // signInWithEmailAndPassword, signOut,
+  // onAuthStateChanged
+} from 'firebase/auth'
 ```
 
-Then initialise the service `const db = getFirestore()` in the file and you can then set up queries from the frontend to the backend Firestore database.
+Then initialise the method, assign to a variable and export `export const auth = getAuth(app);`
+
+Now this method is available wherever you import the file.
