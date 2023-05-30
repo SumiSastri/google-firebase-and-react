@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-import { auth } from "../configs/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth, googleAuth } from "../configs/firebase";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -16,6 +16,16 @@ const SignIn = () => {
     }
   };
 
+  console.log(submitAuthSignIn, "signIn payload");
+
+  const submitGoogleAuthSignUp = async () => {
+    try {
+      await signInWithPopup(auth, googleAuth);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  console.log(submitGoogleAuthSignUp, "google auth signIn payload");
   return (
     <div>
       <p>Already have an account?</p>
@@ -24,6 +34,9 @@ const SignIn = () => {
         <input value={email} onChange={(e) => setEmail(e.target.value)} />
         <input value={password} onChange={(e) => setPassword(e.target.value)} />
         <button type='submit'>Submit</button>
+      </form>
+      <form onSubmit={submitGoogleAuthSignUp}>
+        <button type='submit'>or sign in with Google</button>
       </form>
     </div>
   );

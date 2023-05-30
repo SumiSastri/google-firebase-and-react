@@ -13,7 +13,7 @@ const Register = () => {
       console.log(err, "failed to create user - check code and logs");
     }
   };
-
+  console.log(submitRegistrationWithAuthPayload, "reg payload");
   return (
     <div>
       <h5>Register</h5>

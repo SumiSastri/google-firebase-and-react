@@ -3,7 +3,7 @@ import { auth } from "../configs/firebase";
 import { signOut } from "firebase/auth";
 
 const SignOut = () => {
-  console.log(auth?.currentUser?.email, "current users email");
+  // console.log(auth?.currentUser?.email, "current users email");
   const signOutAuthUser = async () => {
     try {
       await signOut(auth);
