@@ -51,7 +51,7 @@ module.exports = {
 
 ```
 
-8. Add some code to the HTML - the docType and a `h1` tag with text. In the JavaScript File add a `console.log()` function. In terminal test with the script `npm run build`, your log should run if you add a second log, the pack should rebuild and a `bundle.js` file which has bundled the code will now appear in your dist folder.
+8. Add some code to the HTML - the docType and a `h1` tag with text. In the JavaScript File add a `console.log()` function. In terminal test with the script `npm run build`, your log should run if you add a second log, the pack should rebuild and a `bundle.js` file which has bundled the code will now appear in your dist folder. Add a `.gitignore` file to root and ignore `node_modules` if you are using GitHub as your version control.
 
 9. If you are using VSCode install LiveServer extension to view changes in the front end HTML file and add the script tag to the HTML to link the JavaScript changes to the `bundle.js` file like so, `<script src ="bundle.js/>`.
 
