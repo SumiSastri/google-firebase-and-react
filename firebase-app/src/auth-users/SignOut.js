@@ -3,6 +3,7 @@ import { auth } from "../configs/firebase";
 import { signOut } from "firebase/auth";
 
 const SignOut = () => {
+  console.log(auth?.currentUser?.email, "current users email");
   const signOutAuthUser = async () => {
     try {
       await signOut(auth);
@@ -10,12 +11,12 @@ const SignOut = () => {
       console.log(err, "failed logout user - check code, logs");
     }
   };
-  // console.log(auth?.currentUser?.email, "current users email");
+
   return (
     <div>
-      <form>
+      <form onSubmit={signOutAuthUser}>
         <p>Done? Miss you already :-) Come back soon!</p>
-        <button onClick={signOutAuthUser}>Sign-Out</button>
+        <button type='submit'>Sign-Out</button>
       </form>
     </div>
   );
