@@ -4,7 +4,6 @@ title: Resources and further reading
 parent: resources
 grand_parent: firebase
 nav_order: 3
-has_children: false
 ---
 
 # Resources and further reading
