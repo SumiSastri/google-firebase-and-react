@@ -21,6 +21,8 @@ YouTube demos:
 Good for beginners [Webdecoded](https://www.youtube.com/watch?v=Vv_Oi7zPPTw&t=252s)
 Uses React Context to handle Auth[Macksim Ivanov](https://www.youtube.com/watch?v=unr4s3jd9qA)
 
+CRUD [Deepak Malvia](https://www.youtube.com/watch?v=cXWDQhzC3do)
+
 [PedroTech Courses](https://www.youtube.com/watch?v=2hR-uWjBAgw&t=5349s)
 [PedroTech Courses](https://github.com/machadop1407/react-firebase-course)
 
