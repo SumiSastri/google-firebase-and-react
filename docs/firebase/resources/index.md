@@ -17,9 +17,10 @@ Overview of Firebase
 [Plural Sight: Firebase the Big Picture](https://app.pluralsight.com/library/courses/google-firebase-big-picture/table-of-contents)
 [Plural Sight: FirebaseBuild the Big Picture](https://app.pluralsight.com/library/courses/firebase-build-big-picture/table-of-contents)
 
-YouTube courses
+YouTube demos:
 [PedroTech Courses](https://www.youtube.com/watch?v=2hR-uWjBAgw&t=5349s)
 [PedroTech Courses](https://github.com/machadop1407/react-firebase-course)
+[Macksim Ivanov](https://www.youtube.com/watch?v=unr4s3jd9qA])
 
 Comparing Amazon Web Services (AWS) to Google Cloud Services (GCS)
 [CloudVisor Blog](https://cloudvisor.co/blog/aws-vs-firebase/)

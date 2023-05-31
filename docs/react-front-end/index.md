@@ -1,15 +1,34 @@
 ---
 layout: default
-title: React frontend
+title: React frontend scaffolding
 nav_order: 3
 has_children: true
 ---
 
 
-# React frontend
+# React frontend scaffolding
 
 Uninstall global version `npm uninstall -g create-react-app`
 Install CRA `npx create-react-app my-app` - installs latest CRA scripts
+
+For routes to sign-in/ sign-out and register you will need to install a router (react-router for this app but any other router compatible with react is fine)
+
+`npm install react-router react-router-dom`
+
+This is v6 - v5 has some differences in methods and application. If you are more comfortable with v5 install the specific version.
+
+The `.env` file - create in root and transfer keys to the file
+
+Add `.env` files to the  `.gitignore` list to protect your api keys
+
+Format
+
+  `API_KEY = "your_key"`
+
+In the config file 
+
+`apiKey: process.env.API_KEY,`
+
 
 ## Getting Started with Create React App
 

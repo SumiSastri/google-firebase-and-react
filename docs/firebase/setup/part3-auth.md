@@ -18,9 +18,17 @@ grand_parent: firebase
 
 ```JavaScript
 import {
+  // authenticate user
   getAuth,
+  // register
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword, signOut,
+  // sign in with google pop-up component or email and password
+  signInWithPopup 
+  signInWithEmailAndPassword, 
+  // sign out
+  signOut,
   onAuthStateChanged
 } from 'firebase/auth'
 ```
+
+The methods for register, sign-in and signout - take a lot of the grunt work out of the authorisation process. See app code for details.
