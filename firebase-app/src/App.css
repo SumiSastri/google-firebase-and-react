@@ -3,8 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: gray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +13,7 @@
 }
 /* inputs */
 input {
-  background-color: white;
+  background-color: ivory;
   border: solid grey 0.5px;
   border-radius: 2px;
   color: darkgray;
@@ -30,7 +29,7 @@ input {
 /* buttons */
 
 button {
-  background-color: lightsalmon;
+  background-color: lightblue;
   color: darkslategray;
   text-align: center;
   outline: none;
@@ -41,4 +40,28 @@ button {
 
 button:hover {
   opacity: 0.6;
+}
+
+h1 {
+  color: aqua;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: grey;
+}
+
+h4 {
+  color: rebeccapurple;
+}
+
+h5 {
+  color: aqua;
+}
+
+h6 {
+  color: aqua;
 }

@@ -2,10 +2,10 @@ import React from "react";
 
 const AuthNav = () => {
   return (
-    <div>
+    <div className='App-header'>
       <nav>
+        <h1>Google Cloud Services - Firebase authentication</h1>
         <button>Sign-In</button>
-        <button>Sign-Out</button>
       </nav>
     </div>
   );
