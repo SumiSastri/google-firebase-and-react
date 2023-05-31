@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { auth, googleAuth } from "../configs/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+// data
+import { auth, googleAuth } from "../../configs/firebase";
+// components
 import SignOut from "./SignOut";
 import Register from "./Register";
 

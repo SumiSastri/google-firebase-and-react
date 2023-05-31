@@ -1,6 +1,6 @@
 import "./App.css";
-import AuthNav from "./auth-users/AuthNav";
-import SignIn from "./auth-users/SignIn";
+import AuthNav from "./auth/routes/AuthNav";
+import SignIn from "./auth/components/SignIn";
 
 function App() {
   return (
