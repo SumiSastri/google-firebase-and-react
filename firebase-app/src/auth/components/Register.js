@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+
 // data
-import { auth, googleAuth } from "../../configs/firebase";
+import { auth } from "../../configs/firebase";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // hooks
+  const navigate = useNavigate();
 
   const submitRegistrationWithAuthPayload = async (event) => {
     event.preventDefault();
@@ -23,30 +27,16 @@ const Register = () => {
       setPassword("");
     };
     resetFormFields();
-  };
-
-  const submitGoogleAuthSignUp = async (event) => {
-    event.preventDefault();
-    try {
-      await signInWithPopup(auth, googleAuth).then((userCredential) => {
-        console.log(userCredential);
-      });
-    } catch (err) {
-      console.error(err);
-    }
+    navigate("/");
   };
 
   return (
     <div>
-      <h2>No account? Register now</h2>
-      <form onSubmit={submitGoogleAuthSignUp}>
-        <button type='submit'>Register with Google</button>
-      </form>
-      <h4>Or register with an email and password</h4>
       <form onSubmit={submitRegistrationWithAuthPayload}>
+        <h2>Register</h2>
         <input
           type='email'
-          placeholder='Register with an email'
+          placeholder='Register with a valid email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

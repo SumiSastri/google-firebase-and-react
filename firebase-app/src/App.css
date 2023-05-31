@@ -36,6 +36,7 @@ button {
   opacity: 1;
   border-radius: 12px;
   font-size: 20px;
+  margin: 1em;
 }
 
 button:hover {
@@ -48,20 +49,25 @@ h1 {
 
 h2 {
   color: black;
+  margin: 2em;
 }
 
 h3 {
   color: grey;
+  margin: 1em;
 }
 
 h4 {
   color: rebeccapurple;
+  margin: 2em;
 }
 
 h5 {
-  color: aqua;
+  color: brown;
 }
 
 h6 {
-  color: aqua;
+  color: navy;
+  font-size: 12px;
+  margin: 2em;
 }

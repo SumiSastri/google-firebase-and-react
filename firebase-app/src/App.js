@@ -1,16 +1,21 @@
 import "./App.css";
-import AuthNav from "./auth/routes/AuthNav";
-import SignIn from "./auth/components/SignIn";
+import { Route, Routes } from "react-router-dom";
 
-function App() {
+// components for routing
+import SignIn from "./auth/components/SignIn";
+import Register from "./auth/components/Register";
+import Home from "./components/Home";
+
+const App = () => {
   return (
-    <div className='App'>
-      <header>
-        <AuthNav />
-        <SignIn />
-      </header>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

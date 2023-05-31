@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
+import { Link } from "react-router-dom";
+
 // data
 import { auth, googleAuth } from "../../configs/firebase";
 // components
 import SignOut from "./SignOut";
-import Register from "./Register";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -31,7 +32,7 @@ const SignIn = () => {
   const submitGoogleSignIn = async (event) => {
     event.preventDefault();
     try {
-      await signInWithPopup(auth, googleAuth).then((userCredential) => {
+      await signInWithRedirect(auth, googleAuth).then((userCredential) => {
         console.log(userCredential);
       });
     } catch (err) {
@@ -46,7 +47,7 @@ const SignIn = () => {
       <form onSubmit={submitGoogleSignIn}>
         <button type='submit'>Sign-in with Google</button>
       </form>
-      <h4>Or sign-in with email and password</h4>
+      <h4>Sign-in with email and password</h4>
       <form onSubmit={submitAuthSignIn}>
         <input
           type='email'
@@ -62,7 +63,9 @@ const SignIn = () => {
         />
         <button type='submit'>Sign-in with email and password</button>
       </form>
-      <Register />
+      <Link to='/register'>
+        <h3>No account? Register now</h3>
+      </Link>
     </div>
   );
 };
