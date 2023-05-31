@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // data
 import { auth, googleAuth } from "../../configs/firebase";
@@ -8,6 +8,8 @@ import { auth, googleAuth } from "../../configs/firebase";
 import SignOut from "./SignOut";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  // state management
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,6 +29,7 @@ const SignIn = () => {
       setPassword("");
     };
     resetFormFields();
+    navigate("/add-blog");
   };
 
   const submitGoogleSignIn = async (event) => {
@@ -38,6 +41,7 @@ const SignIn = () => {
     } catch (err) {
       console.error(err);
     }
+    navigate("/add-blog");
   };
 
   return (

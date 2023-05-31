@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 // data
 import { auth } from "../../configs/firebase";
 
@@ -32,14 +33,16 @@ const SignOut = () => {
   };
 
   return (
-    <div>
+    <div className='App-header'>
       {authUser ? (
         <form onSubmit={signOutAuthUser}>
-          <h5>Click to sign out from your email: {authUser.email}</h5>
+          <h4>You have signed in with Email ID: {authUser.email}</h4>
           <button type='submit'>Sign Out</button>
         </form>
       ) : (
-        <h2>Sign in to your GCS account</h2>
+        <Link to='/sign-in'>
+          <h2>Sign in to your GCS account</h2>
+        </Link>
       )}
     </div>
   );

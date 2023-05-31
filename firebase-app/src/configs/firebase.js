@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Note: this config is unique to each project set up in Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC6ir2uC4hM5iVl5WGx7m5F7pyCbgl4F90",
   authDomain: "fir-app-f5789.firebaseapp.com",
@@ -19,3 +19,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleAuth = new GoogleAuthProvider();
+export const db = getFirestore(app);

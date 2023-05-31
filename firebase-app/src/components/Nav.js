@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AuthNav = () => {
+const Nav = () => {
   return (
     <div className='App-header'>
       <nav>
@@ -13,4 +13,4 @@ const AuthNav = () => {
     </div>
   );
 };
-export default AuthNav;
+export default Nav;

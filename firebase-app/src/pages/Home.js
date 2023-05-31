@@ -1,10 +1,10 @@
-import AuthNav from "../auth/routes/AuthNav";
+import Nav from "../components/Nav";
 
 const Home = () => {
   return (
     <div className='App'>
       <header>
-        <AuthNav />
+        <Nav />
       </header>
     </div>
   );

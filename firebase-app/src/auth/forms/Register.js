@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../../configs/firebase";
 
 const Register = () => {
+  const navigate = useNavigate();
+  // state management
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // hooks
-  const navigate = useNavigate();
 
   const submitRegistrationWithAuthPayload = async (event) => {
     event.preventDefault();
