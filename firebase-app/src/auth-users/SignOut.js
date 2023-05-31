@@ -4,7 +4,8 @@ import { signOut } from "firebase/auth";
 
 const SignOut = () => {
   // console.log(auth?.currentUser?.email, "current users email");
-  const signOutAuthUser = async () => {
+  const signOutAuthUser = async (event) => {
+    event.preventDefault();
     try {
       await signOut(auth);
     } catch (err) {

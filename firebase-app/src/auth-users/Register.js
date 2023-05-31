@@ -6,7 +6,8 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const submitRegistrationWithAuthPayload = async () => {
+  const submitRegistrationWithAuthPayload = async (event) => {
+    event.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
     } catch (err) {
@@ -14,6 +15,7 @@ const Register = () => {
     }
   };
   console.log(submitRegistrationWithAuthPayload, "reg payload");
+
   return (
     <div>
       <h5>Register</h5>
