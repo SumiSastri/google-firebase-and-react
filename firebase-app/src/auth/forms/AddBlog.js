@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+// protected routes
 import SignOut from "../users/SignOut";
+import BlogDataMutations from "../../firestore/BlogDataMutations";
 
 const AddBlog = () => {
   const navigate = useNavigate();
@@ -16,6 +18,8 @@ const AddBlog = () => {
       author,
     };
     console.log(blogPayload);
+
+    await BlogDataMutations.addBlog(blogPayload);
 
     const resetBlogFields = () => {
       setTitle("");

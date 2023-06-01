@@ -36,7 +36,8 @@ const SignIn = () => {
     event.preventDefault();
     try {
       await signInWithRedirect(auth, googleAuth).then((userCredential) => {
-        console.log(userCredential).then(navigate("/blogs-admin"));
+        console.log(userCredential);
+        navigate("/blogs-admin");
       });
     } catch (err) {
       console.error(err);

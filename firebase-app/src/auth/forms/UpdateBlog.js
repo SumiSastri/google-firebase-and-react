@@ -1,22 +1,35 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+// protected routes
 import SignOut from "../users/SignOut";
+import BlogDataMutations from "../../firestore/BlogDataMutations";
+import BlogDataQuery from "../../firestore/BlogDataQuery";
 
-const UpdateBlog = () => {
+// pass id of blog as props from the table
+const UpdateBlog = ({ id, getBlogId }) => {
+  console.log(getBlogId, "getblogid");
   const navigate = useNavigate();
-  // state management
+  // state management - initial state is the id of the blog clicked
   const [updateTitle, setUpdateTitle] = useState("");
   const [updateAuthor, setUpdateAuthor] = useState("");
 
+  const fetchBlogId = async () => {
+    const data = await BlogDataQuery.getBlogId(id);
+    console.log(data.docs);
+  };
+  console.log(fetchBlogId);
+
   const submitUpdateBlogPayload = async (event) => {
     event.preventDefault();
-
+    // the updated payload is the call back from the event of pre-filled form with new data
     const updateBlogPayload = {
       updateTitle,
       updateAuthor,
     };
     console.log(updateBlogPayload);
-
+    // mutate and send data
+    await BlogDataMutations.updateBlog(id);
+    // reset fields
     const resetFields = () => {
       setUpdateTitle("");
       setUpdateAuthor("");

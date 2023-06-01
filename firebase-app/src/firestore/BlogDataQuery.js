@@ -1,4 +1,4 @@
-import { db } from "../firebase-config";
+import { db } from "../configs/firebase";
 import { getDoc, getDocs, collection, doc } from "firebase/firestore";
 
 const blogCollectionRef = collection(db, "blogs");
