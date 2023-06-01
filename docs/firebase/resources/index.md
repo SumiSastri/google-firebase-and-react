@@ -29,3 +29,5 @@ CRUD [Deepak Malvia](https://www.youtube.com/watch?v=cXWDQhzC3do)
 Comparing Amazon Web Services (AWS) to Google Cloud Services (GCS)
 [CloudVisor Blog](https://cloudvisor.co/blog/aws-vs-firebase/)
 [Multiqos Blog](https://multiqos.com/blogs/firebase-vs-aws-comparisons/)
+
+[Fireship](https://www.youtube.com/watch?v=SXmYUalHyYk)
