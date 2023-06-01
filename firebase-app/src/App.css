@@ -42,6 +42,41 @@ button {
 button:hover {
   opacity: 0.6;
 }
+/* tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  overflow: auto;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+/* sticky tables with change in css */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(32, 4, 32);
+  color: white;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+}
+
+/* text elements */
 
 h1 {
   color: aqua;
@@ -71,3 +106,22 @@ h6 {
   font-size: 12px;
   margin: 2em;
 }
+
+/* links */
+
+a {
+  margin: 5px;
+}
+
+/* a:hover {
+  margin: 10px;
+} */
+
+/* unordered list */
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ordered list */

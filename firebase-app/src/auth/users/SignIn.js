@@ -29,19 +29,18 @@ const SignIn = () => {
       setPassword("");
     };
     resetFormFields();
-    navigate("/add-blog");
+    navigate("/blogs-admin");
   };
 
   const submitGoogleSignIn = async (event) => {
     event.preventDefault();
     try {
       await signInWithRedirect(auth, googleAuth).then((userCredential) => {
-        console.log(userCredential);
+        console.log(userCredential).then(navigate("/blogs-admin"));
       });
     } catch (err) {
       console.error(err);
     }
-    navigate("/add-blog");
   };
 
   return (

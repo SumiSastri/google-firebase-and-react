@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import SignOut from "../auth/forms/SignOut";
+import { useNavigate, Link } from "react-router-dom";
+import SignOut from "../users/SignOut";
 
 const AddBlog = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const AddBlog = () => {
       setAuthor("");
     };
     resetBlogFields();
-    navigate("/blogs");
+    navigate("/blogs-admin");
   };
 
   return (
@@ -43,6 +43,7 @@ const AddBlog = () => {
           onChange={(event) => setAuthor(event.target.value)}
         />
         <button type='submit'>Submit blog</button>
+        <Link to='/blogs-admin'>Cancel</Link>
       </form>
     </div>
   );
