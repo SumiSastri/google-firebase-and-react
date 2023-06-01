@@ -5,30 +5,39 @@ import SignOut from "../users/SignOut";
 import BlogDataMutations from "../../firestore/BlogDataMutations";
 import BlogDataQuery from "../../firestore/BlogDataQuery";
 
-// pass id of blog as props from the table
-const UpdateBlog = ({ id, getBlogId }) => {
-  console.log(getBlogId, "getblogid");
+const UpdateBlog = ({ id, getBlogById }) => {
   const navigate = useNavigate();
-  // state management - initial state is the id of the blog clicked
-  const [updateTitle, setUpdateTitle] = useState("");
-  const [updateAuthor, setUpdateAuthor] = useState("");
-
-  const fetchBlogId = async () => {
-    const data = await BlogDataQuery.getBlogId(id);
-    console.log(data.docs);
+  // set state to data in blogId
+  const [updateTitle, setUpdateTitle] = useState(getBlogById);
+  const [updateAuthor, setUpdateAuthor] = useState(getBlogById);
+  console.log(getBlogById, "blog by Id props");
+  // edit doc by id
+  const editAndUpdateBlogById = async () => {
+    try {
+      const editInfo = await BlogDataQuery.getBlogById();
+      console.log("the record is :", editInfo.data());
+      setUpdateTitle(editInfo.data().title);
+      setUpdateAuthor(editInfo.data().author);
+    } catch (err) {
+      console.log(err, "failed to update data");
+    }
   };
-  console.log(fetchBlogId);
 
+  console.log(editAndUpdateBlogById);
+
+  // submit the edited data
   const submitUpdateBlogPayload = async (event) => {
     event.preventDefault();
-    // the updated payload is the call back from the event of pre-filled form with new data
-    const updateBlogPayload = {
+    // set payload to be updated from the event handler call back
+    const updatedBlogPayload = {
       updateTitle,
       updateAuthor,
     };
-    console.log(updateBlogPayload);
-    // mutate and send data
-    await BlogDataMutations.updateBlog(id);
+    //  if the id has come from firebase
+    if (id !== undefined && id !== "") {
+      // mutate and send updated payload
+      await BlogDataMutations.updateBlog(id, updatedBlogPayload);
+    }
     // reset fields
     const resetFields = () => {
       setUpdateTitle("");

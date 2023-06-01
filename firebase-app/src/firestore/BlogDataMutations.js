@@ -14,9 +14,9 @@ class BlogDataMutations {
     return addDoc(blogCollectionRef, newBlog);
   };
 
-  updateBlog = (id, updatedBlog) => {
+  updateBlog = (id, updatedBlogPayload) => {
     const blogDoc = doc(db, "blogs", id);
-    return updateDoc(blogDoc, updatedBlog);
+    return updateDoc(blogDoc, updatedBlogPayload);
   };
 
   deleteBlog = (id) => {

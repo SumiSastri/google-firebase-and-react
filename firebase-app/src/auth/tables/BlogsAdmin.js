@@ -3,30 +3,34 @@ import React, { useEffect, useState } from "react";
 // protected routes
 import SignOut from "../users/SignOut";
 import BlogDataQuery from "../../firestore/BlogDataQuery";
+import BlogDataMutations from "../../firestore/BlogDataMutations";
 
-const BlogsAdmin = ({ getBlogId }) => {
-  // state management
+// pass props from parent for Id to child components via click handler
+const BlogsAdmin = ({ getBlogById }) => {
   const [blogs, setBlogs] = useState([]);
 
-  // make data call - set state to data
   useEffect(() => {
     fetchBlogs();
   }, []);
-
-  // note the name data can not be customised
   const fetchBlogs = async () => {
     const data = await BlogDataQuery.getAllBlogs();
-    console.log(data.docs);
     setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
-
+  const handleDelete = async (id) => {
+    await BlogDataMutations.deleteBlog(id);
+    fetchBlogs();
+  };
   return (
     <div className='App'>
       <SignOut />
       <h2>Blogs Admin Panel</h2>
+      <button>
+        <Link to='/add-blog'>Create a new blog</Link>
+      </button>
       <table>
         <thead>
           <tr>
+            <th>Serial No</th>
             <th> Id</th>
             <th> Blog Title</th>
             <th> Author </th>
@@ -38,15 +42,17 @@ const BlogsAdmin = ({ getBlogId }) => {
           {blogs.map((doc, index) => {
             return (
               <tr key={doc.id}>
+                <td>{index + 1}</td>
                 <td>{doc.id}</td>
                 <td> {doc.title} </td>
                 <td>{doc.author}</td>
                 <td>
-                  <Link to='/add-blog'>Create</Link>
-                  <Link to='/update-blog'>Update</Link>
+                  <button onClick={(event) => getBlogById(doc.id)}>
+                    <Link to='/update-blog'>Update</Link>
+                  </button>
                 </td>
                 <td>
-                  <button>Delete</button>
+                  <button onClick={(e) => handleDelete(doc.id)}>Delete</button>
                 </td>
               </tr>
             );
