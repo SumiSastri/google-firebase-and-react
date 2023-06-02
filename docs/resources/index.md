@@ -10,10 +10,14 @@ nav_order: 3
 
 Official site
 [Firebase](https://firebase.google.com/)
-[Firebase Admin Console]((https://console.firebase.google.com/))
-[Firebase Docs](https://firebase.google.com/docs)
+[Firebase admin console]((https://console.firebase.google.com/))
 
-Overview of Firebase
+Quick links
+[Firebase docs](https://firebase.google.com/docs)
+[Firebase storage docs](https://firebase.google.com/docs/storage)
+[Firebase storage get started docs](https://firebase.google.com/docs/storage/web/start)
+
+Tutorials:
 [Plural Sight: Firebase the Big Picture](https://app.pluralsight.com/library/courses/google-firebase-big-picture/table-of-contents)
 [Plural Sight: FirebaseBuild the Big Picture](https://app.pluralsight.com/library/courses/firebase-build-big-picture/table-of-contents)
 
@@ -29,5 +33,4 @@ CRUD [Deepak Malvia](https://www.youtube.com/watch?v=cXWDQhzC3do)
 Comparing Amazon Web Services (AWS) to Google Cloud Services (GCS)
 [CloudVisor Blog](https://cloudvisor.co/blog/aws-vs-firebase/)
 [Multiqos Blog](https://multiqos.com/blogs/firebase-vs-aws-comparisons/)
-
 [Fireship](https://www.youtube.com/watch?v=SXmYUalHyYk)

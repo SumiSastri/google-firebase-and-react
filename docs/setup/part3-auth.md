@@ -22,15 +22,12 @@ Set up auth as required for the project. In the config file import all methods y
 
 import {
   getAuth,
-  // createUserWithEmailAndPassword,
-  // signInWithEmailAndPassword, signOut,
-  // onAuthStateChanged
 } from 'firebase/auth'
 ```
 
 Then initialise the method, assign to a variable and export `export const auth = getAuth(app);`
 
-Now this method is available wherever you import the file.
+Now this method is available wherever you import the file. Eg:
 
 ```JavaScript
 import {
@@ -49,4 +46,4 @@ import {
 
 The methods for register, sign-in and signout - take a lot of the grunt work out of the authorisation process. See app code for details.
 
-For protected routes, you can use an Auth Context and wrap all the Auth routes in a React Context config.
+For protected routes, you can use an Auth Context and wrap all the Auth routes in a React Context config. You will also need to set up rules for access to database and file storage systems.

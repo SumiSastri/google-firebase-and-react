@@ -29,11 +29,13 @@ In the config file
 
 `apiKey: process.env.API_KEY,`
 
+[The framer-motion library](https://www.npmjs.com/package/framer-motion)
 
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+[Docs](https://www.framer.com/motion/?utm_source=motion-readme-docs)
+[Examples](https://www.framer.com/motion/examples/?utm_source=motion-readme-docs)
 ## Available Scripts
 
 In the project directory, you can run:
