@@ -2,6 +2,7 @@
 layout: default
 title: Webpack and React
 parent: Setup
+nav_order: 2
 ---
 
 # Webpack and React

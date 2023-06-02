@@ -2,6 +2,7 @@
 layout: default
 title: File storage
 parent: Setup
+nav_order: 2
 ---
 # File Storage
 

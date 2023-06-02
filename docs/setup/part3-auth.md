@@ -2,6 +2,7 @@
 layout: default
 title: Auth
 parent: Setup
+nav_order: 2
 ---
 
 # Auth

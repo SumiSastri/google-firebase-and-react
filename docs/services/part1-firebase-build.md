@@ -2,7 +2,7 @@
 layout: default
 title: Firebase build tools
 parent: services
-
+nav_order: 3
 ---
 
 Firebase is an eco-system of products. Firebase build tools account for about 30% of these products in the development stage of app development.The following services can be enabled or disabled according to your use case.

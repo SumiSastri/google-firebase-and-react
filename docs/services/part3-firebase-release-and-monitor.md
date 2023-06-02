@@ -2,6 +2,7 @@
 layout: default
 title: Firebase release and monitor tools
 parent: services
+nav_order: 3
 ---
 
 # Firebase release and monitor tools

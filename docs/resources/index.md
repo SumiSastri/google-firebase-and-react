@@ -2,7 +2,7 @@
 layout: default
 title: Resources and further reading
 parent: resources
-nav_order: 3
+nav_order: 6
 ---
 
 # Resources and further reading
