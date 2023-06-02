@@ -1,9 +1,8 @@
 ---
 layout: default
 title:Core concepts
-parent: services
-grand_parent: firebase
-nav_order: 2
+nav_order: 3
+has_children: true
 ---
 
 <details open markdown="block">

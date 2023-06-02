@@ -5,28 +5,44 @@ import SignOut from "../users/SignOut";
 import BlogDataQuery from "../../firestore/BlogDataQuery";
 import BlogDataMutations from "../../firestore/BlogDataMutations";
 
-// pass props from parent for Id to child components via click handler
-const BlogsAdmin = ({ getBlogById }) => {
+const BlogsAdmin = () => {
   const [blogs, setBlogs] = useState([]);
+  const [blogId, setBlogId] = useState("");
 
   useEffect(() => {
     fetchBlogs();
   }, []);
+
   const fetchBlogs = async () => {
     const data = await BlogDataQuery.getAllBlogs();
     setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
+
+  const fetchBlogId = async () => {
+    const data = await BlogDataQuery.getBlogById();
+    setBlogId(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  };
+
   const handleDelete = async (id) => {
     await BlogDataMutations.deleteBlog(id);
+    // refreshes the list by refetching data
     fetchBlogs();
   };
+
+  const handleUpdate = async (id) => {
+    await BlogDataMutations.updateBlog(id);
+    // refreshes the list by refetching data
+    fetchBlogId();
+  };
+
   return (
     <div className='App'>
       <SignOut />
       <h2>Blogs Admin Panel</h2>
       <button>
-        <Link to='/add-blog'>Create a new blog</Link>
+        <Link to='/add-blog'>Create content</Link>
       </button>
+
       <table>
         <thead>
           <tr>
@@ -47,12 +63,17 @@ const BlogsAdmin = ({ getBlogById }) => {
                 <td> {doc.title} </td>
                 <td>{doc.author}</td>
                 <td>
-                  <button onClick={(event) => getBlogById(doc.id)}>
+                  <button id={blogId} onClick={(e) => handleUpdate(doc.id)}>
                     <Link to='/update-blog'>Update</Link>
                   </button>
                 </td>
                 <td>
-                  <button onClick={(e) => handleDelete(doc.id)}>Delete</button>
+                  <button
+                    className='danger'
+                    onClick={(e) => handleDelete(doc.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             );

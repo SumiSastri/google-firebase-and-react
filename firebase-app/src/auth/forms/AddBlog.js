@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+
 // protected routes
-import SignOut from "../users/SignOut";
 import BlogDataMutations from "../../firestore/BlogDataMutations";
 
 const AddBlog = () => {
@@ -31,7 +31,6 @@ const AddBlog = () => {
 
   return (
     <div>
-      <SignOut />
       <form onSubmit={submitBlogPayload}>
         <h2>Add content to your blog</h2>
         <input

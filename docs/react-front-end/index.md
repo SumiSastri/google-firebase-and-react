@@ -1,7 +1,7 @@
 ---
 layout: default
 title: React frontend scaffolding
-nav_order: 3
+nav_order: 5
 has_children: true
 ---
 

@@ -1,8 +1,6 @@
 ---
 layout: default
 title: Webpack and React
-parent: setup
-grand_parent: firebase
 ---
 
 <details open markdown="block">

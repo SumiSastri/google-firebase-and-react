@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // protected routes
-import SignOut from "../users/SignOut";
 import BlogDataMutations from "../../firestore/BlogDataMutations";
 import BlogDataQuery from "../../firestore/BlogDataQuery";
 
-const UpdateBlog = ({ id, getBlogById }) => {
+const UpdateBlog = ({ id, blogId }) => {
+  console.log(id, "log id");
+  console.log(blogId, "log blogid");
   const navigate = useNavigate();
-  // set state to data in blogId
-  const [updateTitle, setUpdateTitle] = useState(getBlogById);
-  const [updateAuthor, setUpdateAuthor] = useState(getBlogById);
-  console.log(getBlogById, "blog by Id props");
+  const [updateTitle, setUpdateTitle] = useState(blogId);
+  const [updateAuthor, setUpdateAuthor] = useState(blogId);
+
   // edit doc by id
   const editAndUpdateBlogById = async () => {
     try {
@@ -49,7 +49,6 @@ const UpdateBlog = ({ id, getBlogById }) => {
 
   return (
     <div>
-      <SignOut />
       <form onSubmit={submitUpdateBlogPayload}>
         <h2>Edit or Update Blog</h2>
         <input
