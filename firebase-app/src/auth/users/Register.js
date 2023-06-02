@@ -13,6 +13,7 @@ const Register = () => {
 
   const submitRegistrationWithAuthPayload = async (event) => {
     event.preventDefault();
+
     try {
       await createUserWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
@@ -27,6 +28,7 @@ const Register = () => {
       setPassword("");
     };
     resetFormFields();
+
     navigate("/");
   };
 

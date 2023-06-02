@@ -15,6 +15,7 @@ const SignIn = () => {
 
   const submitAuthSignIn = async (event) => {
     event.preventDefault();
+
     try {
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
@@ -24,11 +25,13 @@ const SignIn = () => {
     } catch (error) {
       console.log(error, "failed to sign in - check credentials");
     }
+
     const resetFormFields = () => {
       setEmail("");
       setPassword("");
     };
     resetFormFields();
+
     navigate("/blogs-admin");
   };
 

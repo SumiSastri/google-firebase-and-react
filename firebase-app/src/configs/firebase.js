@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 // SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -15,8 +16,10 @@ const firebaseConfig = {
   measurementId: "G-5D2YWH2ELK",
 };
 
+// console.log(firebaseConfig.apiKey, "check key");
 // Initialize
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleAuth = new GoogleAuthProvider();
 export const db = getFirestore(app);
+export const staticFileStorage = getStorage(app);

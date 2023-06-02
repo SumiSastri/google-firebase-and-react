@@ -39,9 +39,9 @@ const BlogsAdmin = () => {
     <div className='App'>
       <SignOut />
       <h2>Blogs Admin Panel</h2>
-      <button>
-        <Link to='/add-blog'>Create content</Link>
-      </button>
+
+      <Link to='/add-blog'>Create content</Link>
+      <Link to='/upload-files'>Upload images and files</Link>
 
       <table>
         <thead>

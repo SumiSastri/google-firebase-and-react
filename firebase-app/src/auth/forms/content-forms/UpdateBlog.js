@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 // protected routes
-import BlogDataMutations from "../../firestore/BlogDataMutations";
-import BlogDataQuery from "../../firestore/BlogDataQuery";
+import BlogDataMutations from "../../../firestore/BlogDataMutations";
+import BlogDataQuery from "../../../firestore/BlogDataQuery";
 
 const UpdateBlog = ({ id, blogId }) => {
   console.log(id, "log id");

@@ -22,6 +22,7 @@ const Blogs = () => {
   return (
     <div className='App'>
       <h2>Blogs</h2>
+
       {blogs.map((doc, index) => {
         return (
           <ul key={doc.id}>

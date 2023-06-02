@@ -11,6 +11,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.uploads {
+  height: 60px;
+  font-size: 1rem;
+  margin: 2em;
+}
 /* inputs */
 input {
   background-color: ivory;

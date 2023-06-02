@@ -25,6 +25,7 @@ const SignOut = () => {
 
   const signOutAuthUser = async (event) => {
     event.preventDefault();
+
     try {
       await signOut(auth).then(() => {
         console.log(`Success ${authUser.email} logged out`);
@@ -32,6 +33,7 @@ const SignOut = () => {
     } catch (err) {
       console.log(err, "failed logout user - check code, logs");
     }
+
     navigate("/");
   };
 
