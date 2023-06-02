@@ -4,15 +4,6 @@ title: Auth
 parent: Setup
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 # Auth
 
 In the admin console go to the left nav and select [Auth](https://console.firebase.google.com/) - there is an easy guide to set up Auth and you can click the tabs and experiment with the set up. If you select a set up you do not like the edit function helps you edit the settings. You will require your app ID and Secret for set up for federated sign-in (3rd party sign-in with social accounts, etc.).
