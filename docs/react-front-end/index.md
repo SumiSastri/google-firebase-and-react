@@ -1,12 +1,12 @@
 ---
 layout: default
-title: React frontend scaffolding
+title: React frontend
 nav_order: 5
 has_children: true
 ---
 
 
-# React frontend scaffolding
+# React frontend
 
 Uninstall global version `npm uninstall -g create-react-app`
 Install CRA `npx create-react-app my-app` - installs latest CRA scripts

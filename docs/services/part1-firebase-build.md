@@ -2,19 +2,8 @@
 layout: default
 title: Firebase build tools
 parent: services
-grand_parent: firebase
+
 ---
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
-# Firebase build tools
 
 Firebase is an eco-system of products. Firebase build tools account for about 30% of these products in the development stage of app development.The following services can be enabled or disabled according to your use case.
 

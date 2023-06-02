@@ -5,15 +5,6 @@ nav_order: 4
 has_children: true
 ---
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 # Choosing between Firebase and AWS
 
 Firebase is google's cloud infrastructure and Amazon Web Services is a competitor service. Using one over the other is a matter of use case, personal choice and preference.

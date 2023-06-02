@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Auth 
+title: Auth
+parent: Setup
 ---
 
 <details open markdown="block">

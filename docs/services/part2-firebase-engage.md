@@ -2,18 +2,7 @@
 layout: default
 title: Firebase engage tools
 parent: services
-grand_parent: firebase
 ---
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-
 # Firebase engage tools
 
 Firebase build has some extended functionality which is part of the [Firebase engage suite](https://firebase.google.com/products-engage). Here are some of the services offered
