@@ -3,6 +3,7 @@ import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { storage } from "../../../configs/firebase";
 import { v4 } from "uuid";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const UploadImages = () => {
   const [imageUpload, setImageUpload] = useState(null);
@@ -78,11 +79,14 @@ const UploadImages = () => {
         <Link to='/blogs-admin'>Cancel</Link>
       </form>
       <section className='image-gallery'>
-        {imageUrls.map((imageUrl, index) => (
-          <p key={index + 1}>
-            {index + 1}
-            <img src={imageUrl} alt='uploaded file' />
-          </p>
+        {imageUrls.map((imageUrl) => (
+          <motion.div
+            animate={{ x: 100 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            className='image-wrapper'
+          >
+            <motion.img src={imageUrl} alt='uploaded file' />
+          </motion.div>
         ))}
       </section>
     </>

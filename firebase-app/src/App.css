@@ -12,14 +12,14 @@
   color: white;
 }
 .image-gallery {
-  display: flex;
-  justify-content: space-between;
+  margin: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 img {
+  height: 300px;
   width: auto;
-  margin: 10px;
-  height: 100px;
 }
 /* inputs */
 input {
