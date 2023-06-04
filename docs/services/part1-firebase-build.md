@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase build tools
-parent: services
+parent: Services
 nav_order: 3
 ---
 

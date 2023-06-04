@@ -1,6 +1,7 @@
 ---
 layout: default
 title: React frontend
+parent: React Front End
 nav_order: 5
 has_children: true
 ---

@@ -1,6 +1,7 @@
 ---
 layout: default
 title:Core concepts
+parent: Services
 nav_order: 3
 has_children: true
 ---

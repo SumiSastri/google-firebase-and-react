@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Part 2
-parent: comparisions
+parent: Comparisons
 nav_order: 4
 ---
 

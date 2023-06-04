@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase pros
-parent: comparisions
+parent: Comparisons
 nav_order: 4
 
 ---

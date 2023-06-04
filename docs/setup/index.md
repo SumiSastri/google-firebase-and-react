@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Setting up a Firebase account
+parent: Setup
 nav_order: 2
 has_children: true
 ---
