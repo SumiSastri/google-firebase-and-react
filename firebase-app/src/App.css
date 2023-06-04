@@ -11,10 +11,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.uploads {
-  height: 60px;
-  font-size: 1rem;
-  margin: 2em;
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: auto;
+  margin: 10px;
+  height: 100px;
 }
 /* inputs */
 input {
@@ -62,6 +67,7 @@ button:hover {
 .danger:hover {
   opacity: 0.6;
 }
+
 /* tables */
 table {
   border-collapse: collapse;
@@ -84,6 +90,7 @@ table tr:nth-child(even) {
 table tr:hover {
   background-color: #ddd;
 }
+
 /* sticky tables with change in css */
 th {
   padding-top: 12px;
@@ -133,15 +140,9 @@ a {
   margin: 5px;
 }
 
-/* a:hover {
-  margin: 10px;
-} */
-
 /* unordered list */
 
 ul {
   display: flex;
   justify-content: space-around;
 }
-
-/* ordered list */

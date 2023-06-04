@@ -1,46 +1,65 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
+import { storage } from "../../../configs/firebase";
+import { v4 } from "uuid";
 import { Link } from "react-router-dom";
 
-const UploadFiles = () => {
-  // const navigate = useNavigate();
+const UploadImages = () => {
   // state management
-  const [uploadImage, setUploadImage] = useState(null);
-  const [imageUploadError, setImageUploadError] = useState(null);
+  const [imageUpload, setImageUpload] = useState(null);
+  const [imageUrls, setImageUrls] = useState([]);
+  const imagesListRef = ref(storage, "images/");
 
-  // types is a key from firestore
-  const types = ["image/png", "image/jpeg"];
+  const submitFileUpload = () => {
+    if (imageUpload == null) return;
 
-  const handleImageUpload = (e) => {
-    let selected = e.target.files[0];
-    // check right file extensions uploaded
-    if (selected && types.includes(selected.type)) {
-      setUploadImage(selected);
-      setImageUploadError("");
-    } else {
-      setUploadImage(null);
-      setImageUploadError("Please select an image file (png or jpg)");
-    }
+    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+    uploadBytes(imageRef, imageUpload).then((snapshot) => {
+      getDownloadURL(snapshot.ref).then((url) => {
+        setImageUrls((prev) => [...prev, url]);
+        const resetImageUpload = () => {
+          setImageUrls("");
+        };
+        resetImageUpload();
+      });
+    });
   };
 
+  useEffect(() => {
+    listAll(imagesListRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageUrls((prev) => [...prev, url]);
+        });
+      });
+    });
+  }, []);
+
   return (
-    <div>
-      <h2>Upload photos and files</h2>
-      <label>
-        <input type='file' onChange={handleImageUpload} />
-        <button>Upload photos</button>
-      </label>
-      <Link to='/blogs-admin'>Cancel</Link>
-      {/* if there is an error output error */}
-      <section>
-        {imageUploadError && <div className='danger'>{imageUploadError}</div>}
-        {uploadImage && (
-          <div className='uploads'>
-            <h4>File to upload: {uploadImage.name}</h4>
-          </div>
-        )}
+    <>
+      {console.log(imageUrls, "image urls")}
+      <form onSubmit={submitFileUpload}>
+        <input
+          type='file'
+          onChange={(event) => {
+            setImageUpload(event.target.files[0]);
+          }}
+        />
+        <button type='submit'>Upload image</button>
+        <Link to='/blogs-admin'>Cancel</Link>
+      </form>
+      <section className='image-gallery'>
+        {imageUrls.map((imageUrl, index) => {
+          return (
+            <p key={index + 1}>
+              {index + 1}
+              <img src={imageUrl} alt='uploaded file' />
+            </p>
+          );
+        })}
       </section>
-    </div>
+    </>
   );
 };
 
-export default UploadFiles;
+export default UploadImages;
