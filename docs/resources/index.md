@@ -2,9 +2,10 @@
 layout: default
 title: Resources and further reading
 nav_order: 6
-parent: Resources
 ---
 # Resources and further reading
+
+Here are some of the resources I used to inform my thinking.
 
 Official site
 [Firebase](https://firebase.google.com/)

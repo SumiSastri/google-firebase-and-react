@@ -6,5 +6,3 @@ nav_order: 5
 ---
 
 # Custom hooks for data calls
-
-
