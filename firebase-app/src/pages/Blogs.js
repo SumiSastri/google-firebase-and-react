@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-// data
 import BlogDataQuery from "../firestore/BlogDataQuery";
 
-// pass data from query into props
 const Blogs = () => {
-  // state management
   const [blogs, setBlogs] = useState([]);
 
-  // make data call - set state to data
   useEffect(() => {
     fetchBlogs();
   }, []);
@@ -18,18 +14,17 @@ const Blogs = () => {
     console.log(data.docs);
     setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
-  // pass props to render mutated data
   return (
     <div className='App'>
       <h2>Blogs</h2>
 
-      {blogs.map((doc) => {
+      {blogs.map((doc, index) => {
         return (
           <div className='card-gallery'>
-            <div className='card-list' key={doc.id}>
-              <p className='card'>
+            <div className='card-wrapper' key={doc.id}>
+              <div className='card'>
                 {doc.title} {doc.author}
-              </p>
+              </div>
             </div>
           </div>
         );

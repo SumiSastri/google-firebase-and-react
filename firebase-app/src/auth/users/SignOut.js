@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-// data
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../configs/firebase";
 
 const SignOut = () => {

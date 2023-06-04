@@ -1,15 +1,13 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-
-// data
+import { signInWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
 import { auth, googleAuth } from "../../configs/firebase";
-// components
+
 import SignOut from "./SignOut";
 
 const SignIn = () => {
   const navigate = useNavigate();
-  // state management
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

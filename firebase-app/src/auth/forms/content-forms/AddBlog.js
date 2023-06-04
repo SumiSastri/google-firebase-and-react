@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
-// protected routes
 import BlogDataMutations from "../../../firestore/BlogDataMutations";
 
 const AddBlog = () => {
   const navigate = useNavigate();
-  // state management
+
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
 

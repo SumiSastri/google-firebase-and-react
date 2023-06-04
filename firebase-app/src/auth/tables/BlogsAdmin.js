@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-// protected routes
-import SignOut from "../users/SignOut";
 import BlogDataQuery from "../../firestore/BlogDataQuery";
 import BlogDataMutations from "../../firestore/BlogDataMutations";
+import SignOut from "../users/SignOut";
 
 const BlogsAdmin = () => {
   const [blogs, setBlogs] = useState([]);
