@@ -146,9 +146,20 @@ a {
   margin: 5px;
 }
 
-/* unordered list */
+/* card */
 
-ul {
-  display: flex;
-  justify-content: space-around;
+.card-gallery {
+  display: grid;
+  grid-row-gap: 15px;
+}
+
+.card,
+.card-wrapper,
+.card-list {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: auto;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 }

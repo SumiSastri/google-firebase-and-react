@@ -23,13 +23,15 @@ const Blogs = () => {
     <div className='App'>
       <h2>Blogs</h2>
 
-      {blogs.map((doc, index) => {
+      {blogs.map((doc) => {
         return (
-          <ul key={doc.id}>
-            <li>
-              {doc.title} {doc.author}
-            </li>
-          </ul>
+          <div className='card-gallery'>
+            <div className='card-list' key={doc.id}>
+              <p className='card'>
+                {doc.title} {doc.author}
+              </p>
+            </div>
+          </div>
         );
       })}
     </div>
