@@ -4,6 +4,7 @@ title: Firebase pros
 parent: Comparisons
 nav_order: 4
 ---
+
 # Firebase pros
 
 - Firestore single platform allowing fast development of backend infrastructure services

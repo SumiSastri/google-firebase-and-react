@@ -1,7 +1,7 @@
 ---
 layout: default
 title: React router v6
-parent: React Front End
+parent: React front end
 nav_order: 5
 ---
 # React router v6
