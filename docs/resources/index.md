@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Resources and further reading
-parent: Resources
 nav_order: 6
+parent: Resources
 ---
-
 # Resources and further reading
 
 Official site
@@ -25,6 +24,7 @@ Good for beginners [Webdecoded](https://www.youtube.com/watch?v=Vv_Oi7zPPTw&t=25
 Uses React Context to handle Auth[Macksim Ivanov](https://www.youtube.com/watch?v=unr4s3jd9qA)
 
 CRUD [Deepak Malvia](https://www.youtube.com/watch?v=cXWDQhzC3do)
+Storage [Traversy Media with Net Ninja](https://www.youtube.com/watch?v=vUe91uOx7R0&t=1696s)
 
 [PedroTech Courses](https://www.youtube.com/watch?v=2hR-uWjBAgw&t=5349s)
 [PedroTech Courses](https://github.com/machadop1407/react-firebase-course)

@@ -1,12 +1,10 @@
 ---
 layout: default
 title: React frontend
-parent: React Front End
 nav_order: 5
+parent: React Front End
 has_children: true
 ---
-
-
 # React frontend
 
 Uninstall global version `npm uninstall -g create-react-app`

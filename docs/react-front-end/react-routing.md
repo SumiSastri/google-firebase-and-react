@@ -4,8 +4,6 @@ title: React router v6
 parent: React Front End
 nav_order: 5
 ---
-
-
 # React router v6
 
 Main changes:

@@ -4,7 +4,6 @@ title: Webpack and React
 parent: Setup
 nav_order: 2
 ---
-
 # Webpack and React
 
 Scaffolding the front end with React and webpack

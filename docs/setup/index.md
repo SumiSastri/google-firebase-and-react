@@ -1,12 +1,10 @@
 ---
 layout: default
 title: Setting up a Firebase account
-parent: Setup
 nav_order: 2
+parent: Setup
 has_children: true
 ---
-
-
 # Setting up a Firebase account
 
 If you have a google account sign in and go to the [Firebase site](https://firebase.google.com/) in the top right corner you should see you already have an account you can now create a new project and give it a name.

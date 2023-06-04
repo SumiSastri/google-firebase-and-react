@@ -4,7 +4,6 @@ title: Firestore setup
 parent: Setup
 nav_order: 2
 ---
-
 # Firestore setup
 
 In the admin console go to the left nav and select [Auth](https://console.firebase.google.com/) like Auth, the documentation is easy to follow. Set up in test mode - so that data rules for access do not have to be set up.

@@ -20,12 +20,15 @@ const BlogsAdmin = () => {
 
   const fetchBlogId = async () => {
     const data = await BlogDataQuery.getBlogById();
+    console.log(data);
     setBlogId(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
   const handleDelete = async (id) => {
-    await BlogDataMutations.deleteBlog(id);
-    // refreshes the list by refetching data
+    await BlogDataMutations.deleteBlog(id).then(
+      console.log(handleDelete, "blog deleted")
+    );
+
     fetchBlogs();
   };
 

@@ -3,7 +3,6 @@ layout: default
 title: Firebase pros
 parent: Comparisons
 nav_order: 4
-
 ---
 # Firebase pros
 
