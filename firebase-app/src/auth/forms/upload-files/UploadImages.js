@@ -9,12 +9,13 @@ const UploadImages = () => {
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
-  const submitFileUpload = () => {
+  const submitFileUpload = (event) => {
+    event.preventDefault();
+
     if (imageUpload == null) return;
-    // uuid - attached to name of file to give a unique upload and download experience
-    const fileExtension = imageUpload.name.split(".").pop();
+    // const fileExtension = imageUpload.name.split(".").pop();
     const uniqueId = v4();
-    const imageName = `${imageUpload.name}_${uniqueId}.${fileExtension}`;
+    const imageName = `${imageUpload.name}_${uniqueId}`;
 
     const imageRef = ref(storage, `images/${imageName}`);
     uploadBytes(imageRef, imageUpload)
@@ -30,9 +31,10 @@ const UploadImages = () => {
       .catch((error) => {
         console.log(error, "fail upload image to file storage");
       });
-
-    // Reset the file input
-    setImageUpload(null);
+    const resetImageUpload = () => {
+      setImageUpload(null);
+    };
+    resetImageUpload();
   };
 
   useEffect(() => {
@@ -40,12 +42,8 @@ const UploadImages = () => {
 
     listAll(imagesListRef)
       .then((response) => {
-        // create a promise to prevent 2 sets of data
         const promises = response.items.map((item) =>
           getDownloadURL(item).catch((error) => {
-            // console.log(response.items.length, "check length of response");
-            // console.log("Full Path:", item.fullPath);
-            // console.log("File Name:", item.name);
             console.log(error, "check response mapping errors");
             return null;
           })
@@ -79,13 +77,16 @@ const UploadImages = () => {
         <Link to='/blogs-admin'>Cancel</Link>
       </form>
       <section className='image-gallery'>
-        {imageUrls.map((imageUrl) => (
+        {imageUrls.map((imageUrl, index) => (
           <motion.div
             animate={{ x: 100 }}
             transition={{ ease: "easeOut", duration: 2 }}
             className='image-wrapper'
           >
-            <motion.img src={imageUrl} alt='uploaded file' />
+            <p>{index + 1}</p>
+            <div className='image-wrapper'>
+              <motion.img src={imageUrl} alt='uploaded file' />
+            </div>
           </motion.div>
         ))}
       </section>

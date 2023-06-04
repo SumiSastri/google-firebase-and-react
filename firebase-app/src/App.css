@@ -11,16 +11,22 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .image-gallery {
-  margin: 14px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 15px;
+  grid-row-gap: 15px;
 }
 
+.image-gallery,
+.image-wrapper,
 img {
   height: 300px;
-  width: auto;
+  max-width: 100%;
+  border-radius: 5px;
 }
+
 /* inputs */
 input {
   background-color: ivory;
