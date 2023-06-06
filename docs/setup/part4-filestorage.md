@@ -9,3 +9,7 @@ nav_order: 2
 Go to your project on the Firestore console and on the left nav select storage. Set up in test mode - so that data rules for access do not have to be set up. Go to the Rules tab and have a quick look at the rules set by default.
 
 You can manually upload files or do this programatically.
+
+Programmatically the upload and downloads are not so easy to follow - the code is buggy with v9. See final code in the app as reference.
+
+This code may need to be refactored as there are too many nested promises.

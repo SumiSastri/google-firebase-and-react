@@ -1,16 +1,7 @@
----
-layout: default
-title: Firebase release and monitor tools
-parent: Services
-nav_order: 3
----
 
-# Firebase release and monitor tools
-
-Some of the release and monitor tools have added functionality from the build and engage tools - Remote Config - for example is used across all three stages of the development process.
+WIP
 
 Some specific tools for release and monitor are
-
 
 ## Performance monitoring formerly known as Crashlytics
 

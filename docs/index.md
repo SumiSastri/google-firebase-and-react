@@ -12,3 +12,4 @@ Firebase was initially a chat app created by a startup in 2001, it was acquired 
 
 It is ideal for small teams and start-ups, it is less scalable for enterprise-size apps. At the time of writing (2023) Firebase has upgraded to [V9](https://firebase.google.com/docs/web/modular-upgrade) from V8 and recommends upgrades to V9 as it offers a more modular framework for development.
 
+This is a work in progress - not completed yet.
