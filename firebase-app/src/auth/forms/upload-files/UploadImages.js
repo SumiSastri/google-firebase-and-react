@@ -31,12 +31,6 @@ const UploadImages = () => {
       .catch((error) => {
         console.log(error, "fail upload image to file storage");
       });
-
-    // Reset the file input
-    const resetImageUpload = () => {
-      setImageUpload([]);
-    };
-    resetImageUpload();
   };
 
   useEffect(() => {
@@ -80,8 +74,11 @@ const UploadImages = () => {
           }}
         />
         <button type='submit'>Upload image</button>
-        <Link to='/blogs-admin'>Cancel</Link>
+        <Link to='/blogs-admin'>
+          <button>Back to admin</button>
+        </Link>
       </form>
+      <hr />
       <section className='image-gallery'>
         {imageUrls.map((imageUrl) => (
           <motion.div

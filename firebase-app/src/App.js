@@ -10,6 +10,7 @@ import AddBlog from "./auth/forms/content-forms/AddBlog";
 import UpdateBlog from "./auth/forms/content-forms/UpdateBlog";
 import BlogsAdmin from "./auth/tables/BlogsAdmin";
 import UploadImages from "./auth/forms/upload-files/UploadImages";
+import UploadFiles from "./auth/forms/upload-files/UploadFiles";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/add-blog' element={<AddBlog />} />
         <Route path='/update-blog' element={<UpdateBlog />} />
         <Route path='/upload-images' element={<UploadImages />} />
+        <Route path='/upload-files' element={<UploadFiles />} />
       </Routes>
     </div>
   );

@@ -43,7 +43,8 @@ const BlogsAdmin = () => {
       <h2>Blogs Admin Panel</h2>
 
       <Link to='/add-blog'>Create content</Link>
-      <Link to='/upload-images'>Upload images and files</Link>
+      <Link to='/upload-images'>Upload images</Link>
+      <Link to='/upload-images'>Upload files</Link>
 
       <table>
         <thead>
