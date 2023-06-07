@@ -44,7 +44,7 @@ const BlogsAdmin = () => {
 
       <Link to='/add-blog'>Create content</Link>
       <Link to='/upload-images'>Upload images</Link>
-      <Link to='/upload-images'>Upload files</Link>
+      <Link to='/upload-files'>Upload files</Link>
 
       <table>
         <thead>

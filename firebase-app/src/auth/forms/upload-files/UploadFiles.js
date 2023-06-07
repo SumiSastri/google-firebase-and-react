@@ -1,51 +1,47 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
-import { storage } from "../../../configs/firebase";
-
+import ProgressBar from "./ProgressBar";
+import { motion } from "framer-motion";
 const UploadFiles = () => {
-  const [progress, setProgress] = useState(0);
+  const [file, setFile] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const submitUploadedFile = (e) => {
     e.preventDefault();
 
-    const file = e.target[0].files[0];
-    fileUpload(file);
-  };
+    let selected = e.target[0].files[0];
 
-  const fileUpload = async (file) => {
-    //
-    if (!file) return;
-
-    const fileStorageReference = ref(storage, `files/${file.name}`);
-    const uploadTask = uploadBytesResumable(fileStorageReference, file);
-
-    await uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const prog = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        setProgress(prog);
-      },
-      (error) => console.log(error),
-      () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          console.log("File available at", downloadURL);
-        });
-      }
-    );
+    if (selected) {
+      setFile(selected);
+      setErrorMessage("Upload complete");
+    } else {
+      setFile(null);
+      setErrorMessage("Please select a file");
+    }
   };
 
   return (
     <div>
       <form onSubmit={submitUploadedFile}>
+        <Link to='/'>Home</Link>
+        {errorMessage && <h5 className='danger'>{errorMessage}</h5>}
+        {file && (
+          <motion.div
+            animate={{ x: 1 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            className='image-wrapper'
+          >
+            <h6>Uploading:{file.name}</h6>
+          </motion.div>
+        )}
+        {file && (
+          <h5>
+            Upload progress:
+            <ProgressBar file={file} setFile={setFile} />
+          </h5>
+        )}
         <input type='file' className='input' />
         <button type='submit'>Upload</button>
-        <Link to='/blogs-admin'>
-          <button>Back to admin</button>
-        </Link>
-        <h2>Upload progress: {progress}%</h2>
       </form>
     </div>
   );
