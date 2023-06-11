@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../configs/firebase";
 
-// function declaration
 const useFileStorage = (file) => {
   const [progress, setProgress] = useState(0);
   const [fileUrl, setFileUrl] = useState(null);
@@ -13,9 +12,7 @@ const useFileStorage = (file) => {
     const uploadTask = uploadBytesResumable(fileStorageReference, file);
 
     uploadTask.on(
-      // trigger event - when state changes
       "state_changed",
-      // snapshot in time when the file is uploaded
       (snapshot) => {
         const progressPercentage = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100

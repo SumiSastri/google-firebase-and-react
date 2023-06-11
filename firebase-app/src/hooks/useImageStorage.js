@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { storage } from "../configs/firebase";
 
-// function declaration
 const useImageStorage = (image) => {
   const [progress, setProgress] = useState(0);
   const [imageUrl, setImageUrl] = useState(null);

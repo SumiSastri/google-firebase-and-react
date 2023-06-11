@@ -27,8 +27,13 @@ const UploadFiles = () => {
       <form onSubmit={submitUploadedFile}>
         {errorMessage && <h5 className='danger'>{errorMessage}</h5>}
         {file && <h6>Uploading{file.name}</h6>}
-        <input type='file' className='input' />
-        <button type='submit'>Submit uploaded file</button>
+        <input
+          type='file'
+          onChange={(event) => {
+            setFile(event.target.files[0]);
+          }}
+        />
+        <button type='submit'>Submit Uploaded File</button>
         {file && (
           <h5>
             <FileUploadProgress file={file} setFile={setFile} />
