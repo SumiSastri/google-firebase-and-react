@@ -6,10 +6,10 @@ import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 import SignIn from "./auth/users/SignIn";
 import Register from "./auth/users/Register";
-import AddBlog from "./auth/forms/content-forms/AddBlog";
-import UpdateBlog from "./auth/forms/content-forms/UpdateBlog";
+import AddBlog from "./auth/forms/blog-forms/AddBlog";
+import UpdateBlog from "./auth/forms/blog-forms/UpdateBlog";
 import BlogsAdmin from "./auth/tables/BlogsAdmin";
-import UploadImages from "./auth/forms/upload-files/UploadImages";
+import UploadImages from "./auth/forms/upload-images/UploadImages";
 import UploadFiles from "./auth/forms/upload-files/UploadFiles";
 
 const App = () => {

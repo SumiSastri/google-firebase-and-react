@@ -8,6 +8,7 @@ import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6ir2uC4hM5iVl5WGx7m5F7pyCbgl4F90",
+  // apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "fir-app-f5789.firebaseapp.com",
   projectId: "fir-app-f5789",
   storageBucket: "fir-app-f5789.appspot.com",
@@ -15,8 +16,7 @@ const firebaseConfig = {
   appId: "1:514174577555:web:7d39eaa08b09d364da9666",
   measurementId: "G-5D2YWH2ELK",
 };
-
-// console.log(firebaseConfig.apiKey, "check key");
+console.log(firebaseConfig.apiKey, "check key");
 // Initialize
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

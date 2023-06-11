@@ -29,29 +29,28 @@ const SignIn = () => {
       setPassword("");
     };
     resetFormFields();
-
-    navigate("/blogs-admin");
   };
 
   const submitGoogleSignIn = async (event) => {
     event.preventDefault();
+    navigate("/blogs-admin");
     try {
-      await signInWithRedirect(auth, googleAuth).then((userCredential) => {
-        console.log(userCredential);
-        navigate("/blogs-admin");
-      });
+      await signInWithRedirect(auth, googleAuth);
     } catch (err) {
       console.error(err);
     }
+    navigate("/blogs-admin");
   };
 
   return (
     <div>
       <SignOut />
-      <h3>Use Google to sign-in</h3>
+
       <form onSubmit={submitGoogleSignIn}>
+        <h3>Use Google to sign-in</h3>
         <button type='submit'>Sign-in with Google</button>
       </form>
+
       <h4>Sign-in with email and password</h4>
       <form onSubmit={submitAuthSignIn}>
         <input

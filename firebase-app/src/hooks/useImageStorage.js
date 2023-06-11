@@ -1,21 +1,19 @@
 import { useState, useEffect } from "react";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
-import { storage } from "./firebase";
+import { storage } from "../configs/firebase";
 
 // function declaration
-const useFileStorage = (file) => {
+const useImageStorage = (image) => {
   const [progress, setProgress] = useState(0);
-  const [fileUrl, setFileUrl] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fileStorageReference = ref(storage, `files/${file.name}`);
-    const uploadTask = uploadBytesResumable(fileStorageReference, file);
+    const imageStorageReference = ref(storage, `images/${image.name}`);
+    const uploadTask = uploadBytesResumable(imageStorageReference, image);
 
     uploadTask.on(
-      // trigger event - when state changes
       "state_changed",
-      // snapshot in time when the file is uploaded
       (snapshot) => {
         const progressPercentage = Math.round(
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100
@@ -26,13 +24,13 @@ const useFileStorage = (file) => {
         setError(error);
       },
       async () => {
-        let fileUrl = await getDownloadURL(uploadTask.snapshot.ref);
-        setFileUrl(fileUrl);
+        let imageUrl = await getDownloadURL(uploadTask.snapshot.ref);
+        setImageUrl(imageUrl);
       }
     );
-  }, [file]);
+  }, [image]);
 
-  return { progress, fileUrl, error };
+  return { progress, imageUrl, error };
 };
 
-export default useFileStorage;
+export default useImageStorage;

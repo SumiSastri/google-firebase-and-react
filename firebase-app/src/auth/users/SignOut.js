@@ -5,9 +5,8 @@ import { auth } from "../../configs/firebase";
 
 const SignOut = () => {
   const navigate = useNavigate();
-  // state management
   const [authUser, setAuthUser] = useState(null);
-  // data calls
+
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
       if (user) {

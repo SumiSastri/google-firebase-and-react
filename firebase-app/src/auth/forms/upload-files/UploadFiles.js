@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import ProgressBar from "./ProgressBar";
-import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
+import FileUploadProgress from "./FileUploadProgress";
+
 const UploadFiles = () => {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -13,7 +14,8 @@ const UploadFiles = () => {
 
     if (selected) {
       setFile(selected);
-      setErrorMessage("Upload complete");
+      setErrorMessage("You have successfully completed uploading your file ");
+      navigate("/blogs-admin");
     } else {
       setFile(null);
       setErrorMessage("Please select a file");
@@ -23,25 +25,18 @@ const UploadFiles = () => {
   return (
     <div>
       <form onSubmit={submitUploadedFile}>
-        <Link to='/'>Home</Link>
         {errorMessage && <h5 className='danger'>{errorMessage}</h5>}
-        {file && (
-          <motion.div
-            animate={{ x: 1 }}
-            transition={{ ease: "easeOut", duration: 2 }}
-            className='image-wrapper'
-          >
-            <h6>Uploading:{file.name}</h6>
-          </motion.div>
-        )}
+        {file && <h6>Uploading{file.name}</h6>}
+        <input type='file' className='input' />
+        <button type='submit'>Submit uploaded file</button>
         {file && (
           <h5>
-            Upload progress:
-            <ProgressBar file={file} setFile={setFile} />
+            <FileUploadProgress file={file} setFile={setFile} />
           </h5>
         )}
-        <input type='file' className='input' />
-        <button type='submit'>Upload</button>
+        <button>
+          <Link to='/blogs-admin'>Return to Admin Page</Link>
+        </button>
       </form>
     </div>
   );
