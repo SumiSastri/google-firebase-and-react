@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firebase pros
-parent: Comparisons
+title: Choosing between Firebase and AWS
 nav_order: 4
 ---
 

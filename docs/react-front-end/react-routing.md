@@ -1,7 +1,7 @@
 ---
 layout: default
 title: React router v6
-parent: React front end
+parent: React frontend
 nav_order: 5
 ---
 # React router v6
@@ -28,3 +28,5 @@ reportWebVitals();
 2. `Switch` constructor changes to `Routes` and no elements can be placed between `Routes` and `Route` providers
 
 3. `useHistory` replaced by `useNavigate` hook
+
+4. `useParams` to pass data - no change

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Part 2
-parent: Comparisons
+title: Choosing between Firebase and AWS
 nav_order: 4
 ---
 

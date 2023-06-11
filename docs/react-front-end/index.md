@@ -25,8 +25,6 @@ Format
 
 In the config file.
 
-
-
 `apiKey: process.env.API_KEY,`
 
 [The framer-motion library](https://www.npmjs.com/package/framer-motion)

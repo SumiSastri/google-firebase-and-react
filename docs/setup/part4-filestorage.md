@@ -1,7 +1,7 @@
 ---
 layout: default
 title: File storage
-parent: Setup
+itle: Setting up a Firebase account
 nav_order: 2
 ---
 # File storage
@@ -11,5 +11,3 @@ Go to your project on the Firestore console and on the left nav select storage. 
 You can manually upload files or do this programatically.
 
 Programmatically the upload and downloads are not so easy to follow - the code is buggy with v9. See final code in the app as reference.
-
-This code may need to be refactored as there are too many nested promises.

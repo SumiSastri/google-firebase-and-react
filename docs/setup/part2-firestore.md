@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Firestore setup
-parent: Setup
+itle: Setting up a Firebase account
 nav_order: 2
 ---
 # Firestore setup

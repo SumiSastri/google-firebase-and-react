@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Webpack and React
-parent: Setup
+itle: Setting up a Firebase account
 nav_order: 2
 ---
 # Webpack and React
