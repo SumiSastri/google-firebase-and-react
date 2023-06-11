@@ -17,8 +17,8 @@ const BlogsAdmin = () => {
     setBlogs(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
-  const fetchBlogId = async () => {
-    const data = await BlogDataQuery.getBlogById();
+  const fetchBlogId = async (id) => {
+    const data = await BlogDataQuery.getBlogById(id);
     console.log(data);
     setBlogId(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
@@ -34,7 +34,7 @@ const BlogsAdmin = () => {
   const handleUpdate = async (id) => {
     await BlogDataMutations.updateBlog(id);
     // refreshes the list by refetching data
-    fetchBlogId();
+    fetchBlogId(id);
   };
 
   return (
@@ -67,7 +67,7 @@ const BlogsAdmin = () => {
                 <td>{doc.author}</td>
                 <td>
                   <button id={blogId} onClick={(e) => handleUpdate(doc.id)}>
-                    <Link to='/update-blog'>Update</Link>
+                    <Link to={`/update-blog/${doc.id}/${doc.id}`}>Update</Link>
                   </button>
                 </td>
                 <td>

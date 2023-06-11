@@ -23,9 +23,10 @@ const App = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/blogs-admin' element={<BlogsAdmin />} />
         <Route path='/add-blog' element={<AddBlog />} />
-        <Route path='/update-blog' element={<UpdateBlog />} />
         <Route path='/upload-images' element={<UploadImages />} />
         <Route path='/upload-files' element={<UploadFiles />} />
+        {/* paths with ids */}
+        <Route path='/update-blog/:blogId/' element={<UpdateBlog />} />
       </Routes>
     </div>
   );
