@@ -20,8 +20,8 @@ const Blogs = () => {
 
       {blogs.map((doc, index) => {
         return (
-          <div className='card-gallery'>
-            <div className='card-wrapper' key={doc.id}>
+          <div key={doc.id} className='card-gallery'>
+            <div className='card-wrapper'>
               <div className='card'>
                 {doc.title} {doc.author}
               </div>

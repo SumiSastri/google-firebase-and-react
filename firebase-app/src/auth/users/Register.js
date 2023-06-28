@@ -31,7 +31,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className='App'>
       <form onSubmit={submitRegistrationWithAuthPayload}>
         <h2>Register</h2>
         <input
@@ -46,7 +46,8 @@ const Register = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type='submit'>Submit email & password registration</button>
+        <br />
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );

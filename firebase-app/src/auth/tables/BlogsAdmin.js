@@ -40,8 +40,8 @@ const BlogsAdmin = () => {
   return (
     <div className='App'>
       <SignOut />
-      <h2>Blogs Admin Panel</h2>
 
+      <h2>Blogs Admin Panel</h2>
       <Link to='/add-blog'>Create content</Link>
       <Link to='/upload-images'>Upload images</Link>
       <Link to='/upload-files'>Upload files</Link>

@@ -7,7 +7,7 @@ const Nav = () => {
       <nav>
         <h1>Google Cloud Services - Firebase authentication</h1>
         <Link to='/sign-in'>
-          <button>Sign-In</button>
+          <h2>Sign-In</h2>
         </Link>
       </nav>
     </div>

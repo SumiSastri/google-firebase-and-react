@@ -31,7 +31,6 @@ const SignOut = () => {
     } catch (err) {
       console.log(err, "failed logout user - check code, logs");
     }
-
     navigate("/");
   };
 
@@ -43,8 +42,8 @@ const SignOut = () => {
           <button type='submit'>Sign Out</button>
         </form>
       ) : (
-        <Link to='/sign-in'>
-          <h2>Sign in to your GCS account</h2>
+        <Link to='/'>
+          <button type='submit'>Sign Out</button>
         </Link>
       )}
     </div>

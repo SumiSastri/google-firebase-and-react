@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithRedirect } from "firebase/auth";
 import { auth, googleAuth } from "../../configs/firebase";
 
-import SignOut from "./SignOut";
+import Nav from "../../components/Nav";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const SignIn = () => {
 
   const submitAuthSignIn = async (event) => {
     event.preventDefault();
-
+    navigate("/blogs-admin");
     try {
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
@@ -39,20 +39,25 @@ const SignIn = () => {
     } catch (err) {
       console.error(err);
     }
-    navigate("/blogs-admin");
   };
 
   return (
     <div>
-      <SignOut />
+      <Nav />
 
-      <form onSubmit={submitGoogleSignIn}>
+      <h3 className='App'>
+        No account?
+        <Link to='/register'>
+          <h2>Register now</h2>
+        </Link>
+      </h3>
+      <form className='App' onSubmit={submitGoogleSignIn}>
         <h3>Use Google to sign-in</h3>
         <button type='submit'>Sign-in with Google</button>
       </form>
 
-      <h4>Sign-in with email and password</h4>
-      <form onSubmit={submitAuthSignIn}>
+      <form className='App' onSubmit={submitAuthSignIn}>
+        <h3>Sign-in with email and password</h3>
         <input
           type='email'
           placeholder='Email'
@@ -65,11 +70,9 @@ const SignIn = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <br />
         <button type='submit'>Sign-in with email and password</button>
       </form>
-      <Link to='/register'>
-        <h3>No account? Register now</h3>
-      </Link>
     </div>
   );
 };
