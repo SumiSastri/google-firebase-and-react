@@ -21,4 +21,19 @@ Key learnings - comparison with AWS (Amazon Web Services)
 4. Programmatic image uploads and downloads challenging with V9 of GCS compared with S3 uploads
 5. Like all data-hosting service providers lock-in is an issue - this app using dummy data.
 
-Docs folder is a work-in-progress as I plan to check out Google Functions in the coming weeks/ months.
+Note: 
+
+- Docs folder is a work-in-progress as I plan to check out Google Functions in the coming weeks/ months.
+
+
+Refactors planned:
+
+- Auth context for auth routes
+- Use custom hooks to abstract away data-calls from the component
+- Use .env for config
+- Use AppCheck to protect backend
+- Migrate to Typescript
+- Add validation - file extensions for docs/ images + form field validations
+- Add tests
+- Improve ui-ux - email/ password reroute to admin page for eg
+- Improve styling
